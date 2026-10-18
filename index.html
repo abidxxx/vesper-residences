@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vesper Residences — Lakeside Living, Lake Tahoe</title>
+  <meta name="description" content="Vesper is a private collection of thirty lakeside residences on the Nevada shore of Lake Tahoe. Shore Pavilions, Ridge Lofts and The Lantern penthouses.">
+  <meta name="theme-color" content="#121717">
+  <meta property="og:title" content="Vesper Residences — Lake Tahoe">
+  <meta property="og:description" content="Thirty private homes between the pines and the lake.">
+  <meta property="og:image" content="assets/img/hero-2-modern-bluehour.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23121717'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-size='42' fill='%23ffffff'%3EV%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/img/hero-2-modern-bluehour.jpg">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    document.documentElement.classList.add("js");
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("motion");
+  </script>
+</head>
+<body>
+
+  <!-- ============ PRELOADER ============ -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <span class="loader-mark">Vesper</span>
+      <span class="loader-count"><span id="loader-num">0</span>%</span>
+    </div>
+    <span class="loader-line"><span></span></span>
+  </div>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="wrap header-wrap">
+      <a href="#top" class="logo" aria-label="Vesper Residences, back to top">Vesper</a>
+
+      <nav class="nav" aria-label="Residences">
+        <button type="button" class="nav-link" data-open-residence="0">Shore Pavilions</button>
+        <button type="button" class="nav-link" data-open-residence="1">Ridge Lofts</button>
+        <button type="button" class="nav-link" data-open-residence="2">The Lantern</button>
+      </nav>
+
+      <div class="header-right">
+        <a href="#visit" class="btn btn-white header-btn">Book a visit</a>
+        <button type="button" class="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+          <span></span><span></span>
+        </button>
+      </div>
+      <span class="header-line" aria-hidden="true"></span>
+    </div>
+  </header>
+
+  <div class="menu" id="menu" data-lenis-prevent hidden>
+    <nav class="menu-nav" aria-label="Mobile">
+      <a href="#about">About</a>
+      <a href="#residences">Residences</a>
+      <a href="#philosophy">Philosophy</a>
+      <a href="#amenities">Amenities</a>
+      <a href="#faq">FAQ</a>
+      <a href="#visit">Book a visit</a>
+    </nav>
+    <p class="menu-foot">Incline Village · Lake Tahoe · Nevada</p>
+  </div>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top" aria-label="Vesper Residences">
+      <div class="hero-media" aria-hidden="true">
+        <div class="hero-slide is-active"><img src="assets/img/hero-2-modern-bluehour.jpg" alt=""></div>
+        <div class="hero-slide"><img src="assets/img/hero-dusk-house.jpg" alt="" loading="lazy"></div>
+        <div class="hero-slide"><img src="assets/img/hero-1-timber-dusk.jpg" alt="" loading="lazy"></div>
+      </div>
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="grain" aria-hidden="true"></div>
+
+      <div class="wrap hero-wrap">
+        <div class="hero-index" aria-hidden="true">
+          <span class="hero-count"><span id="hero-current">01</span> / 03</span>
+          <span class="hero-bars"><i></i><i></i><i></i></span>
+        </div>
+
+        <div class="hero-bottom">
+          <h1 class="hero-title" aria-label="Vesper">
+            <span class="hero-chars" aria-hidden="true"><span><span>V</span></span><span><span>E</span></span><span><span>S</span></span><span><span>P</span></span><span><span>E</span></span><span><span>R</span></span></span>
+          </h1>
+
+          <div class="hero-right">
+            <p class="hero-right-heading" data-hero="words">Quiet luxury<br>at the water’s edge</p>
+            <p class="hero-text" data-hero="text">Thirty private homes on the Nevada shore of Lake Tahoe, where architecture steps back so the water, the pines and the evening light can lead.</p>
+            <a href="#about" class="scroll-cue" data-hero="scroll"><span class="scroll-cue-line" aria-hidden="true"></span>Scroll</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="about section" id="about">
+      <div class="wrap">
+        <div class="about-head">
+          <p class="caption" data-fade>(About)</p>
+          <h2 class="h4" data-split>Architecture shaped <em>by water and pine</em></h2>
+        </div>
+
+        <div class="about-grid">
+          <figure class="about-img img-frame" data-reveal>
+            <div class="parallax" data-parallax><img src="assets/img/about-living-fireplace.jpg" alt="An open living room with a fireplace and floor-to-ceiling glass opening onto a terrace" loading="lazy"></div>
+          </figure>
+
+          <div class="about-text">
+            <p class="b1" data-fade>Vesper occupies sixty-two acres of protected Jeffrey pine above a private stretch of shoreline. Every home faces the water, and none is visible from another.</p>
+            <p class="b4 dim" data-fade>We built fewer homes so each could be better: hand-oiled cedar, Sierra granite, glass that disappears in summer and walls that make winter feel like a choice. Concierge, ski valet and a lakeside spa are part of everyday life here, not an occasion.</p>
+
+            <dl class="stats">
+              <div data-fade><dt><span data-count="30">30</span></dt><dd>private residences</dd></div>
+              <div data-fade><dt><span data-count="62">62</span><small>acres</small></dt><dd>of protected forest</dd></div>
+              <div data-fade><dt><span data-count="400">400</span><small>ft</small></dt><dd>of private shoreline</dd></div>
+              <div data-fade><dt>24/7</dt><dd>concierge &amp; ski valet</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RESIDENCES ============ -->
+    <section class="residences section" id="residences" aria-roledescription="carousel" aria-label="Residences">
+      <div class="wrap">
+        <div class="res-head">
+          <div>
+            <p class="caption" data-fade>(Our residences)</p>
+            <h2 class="h4" data-split>Three ways <em>to live by the lake</em></h2>
+          </div>
+          <div class="res-controls" data-fade>
+            <span class="res-counter"><span id="res-current">01</span> / 03</span>
+            <button type="button" class="round-btn" id="res-prev" aria-label="Previous residence">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+            </button>
+            <button type="button" class="round-btn" id="res-next" aria-label="Next residence">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="res-stage" id="res-stage">
+        <div class="res-slide" data-index="0" role="group" aria-label="1 of 3">
+          <div class="res-img"><img src="assets/img/res-shore-main.jpg" alt="Shore Pavilion living room opening to a terrace pool" loading="lazy"></div>
+        </div>
+        <div class="res-slide" data-index="1" role="group" aria-label="2 of 3">
+          <div class="res-img"><img src="assets/img/res-ridge-main.jpg" alt="Ridge Loft great room with a timber ceiling and full-height windows" loading="lazy"></div>
+        </div>
+        <div class="res-slide" data-index="2" role="group" aria-label="3 of 3">
+          <div class="res-img"><img src="assets/img/res-lantern-penthouse.jpg" alt="Lantern penthouse living space with a walnut feature wall" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="wrap res-info" aria-live="polite">
+        <div class="res-info-main">
+          <h3 class="h5 res-title" id="res-title">Shore Pavilions</h3>
+          <p class="res-specs" id="res-specs">3–4 bedrooms · 3,400–4,100 sq ft · 12 homes</p>
+        </div>
+        <div class="res-info-side">
+          <p class="b4 dim res-desc" id="res-desc">Single-level homes set at the waterline. In summer the glass walls slide away completely, and the terrace, pool and lake become one long room.</p>
+          <button type="button" class="btn btn-stroke" id="res-explore">Explore residence</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PHILOSOPHY ============ -->
+    <section class="philosophy section" id="philosophy">
+      <div class="wrap">
+        <div class="philo-head">
+          <p class="caption" data-fade>(Our philosophy)</p>
+          <h2 class="h3" data-split>A life in tune <em>with the lake</em></h2>
+        </div>
+
+        <figure class="philo-img img-frame" data-reveal>
+          <div class="parallax" data-parallax><img src="assets/img/beliefs-forest-cabin.jpg" alt="A cabin glowing warmly among tall pines at night" loading="lazy"></div>
+        </figure>
+
+        <p class="philo-mission b0" data-split>We believe a home should feel like the landscape it belongs to: <em>calm, unhurried</em> and built to last for generations.</p>
+
+        <ol class="values" data-stagger>
+          <li class="value is-open" tabindex="0">
+            <div class="value-bg"><img src="assets/img/hour-0600-first-light.jpg" alt="" loading="lazy"></div>
+            <span class="value-num">01</span>
+            <h3 class="value-title">Stillness</h3>
+            <p class="value-text">Rooms face the quietest views and are acoustically separated, so silence is part of the architecture.</p>
+          </li>
+          <li class="value" tabindex="0">
+            <div class="value-bg"><img src="assets/img/belief-forest.jpg" alt="" loading="lazy"></div>
+            <span class="value-num">02</span>
+            <h3 class="value-title">Privacy</h3>
+            <p class="value-text">Gated grounds, a staffed entrance and homes screened by old-growth pine. Discretion is designed in, not added later.</p>
+          </li>
+          <li class="value" tabindex="0">
+            <div class="value-bg"><img src="assets/img/res-ridge-lofts.jpg" alt="" loading="lazy"></div>
+            <span class="value-num">03</span>
+            <h3 class="value-title">Craft</h3>
+            <p class="value-text">Hand-oiled cedar, Sierra granite and bronze hardware, chosen to age gracefully rather than stay new.</p>
+          </li>
+          <li class="value" tabindex="0">
+            <div class="value-bg"><img src="assets/img/hour-2200-lanterns.jpg" alt="" loading="lazy"></div>
+            <span class="value-num">04</span>
+            <h3 class="value-title">Community</h3>
+            <p class="value-text">A small circle of owners, shared suppers at the boathouse and a concierge who knows your name.</p>
+          </li>
+          <li class="value" tabindex="0">
+            <div class="value-bg"><img src="assets/img/belief-valley.jpg" alt="" loading="lazy"></div>
+            <span class="value-num">05</span>
+            <h3 class="value-title">Stewardship</h3>
+            <p class="value-text">Land held in conservation, solar-assisted energy and a shoreline restored with native planting.</p>
+          </li>
+        </ol>
+
+        <div class="philo-close">
+          <p class="b1" data-fade>Home is a reflection of what we value. At Vesper that means light over spectacle, nature over noise and time spent well.</p>
+          <figure class="philo-close-a img-frame" data-reveal>
+            <div class="parallax" data-parallax><img src="assets/img/hour-1800-vesper.jpg" alt="Mountain peaks above a sea of cloud at sunset" loading="lazy"></div>
+          </figure>
+          <figure class="philo-close-b img-frame" data-reveal>
+            <div class="parallax" data-parallax><img src="assets/img/room-lantern-bedroom.jpg" alt="A dark, calm bedroom with a velvet headboard and brass lamp" loading="lazy"></div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ AMENITIES (pinned scroll scene) ============ -->
+    <section class="amenities" id="amenities">
+      <div class="amen-track" id="amen-track">
+        <div class="amen-sticky">
+          <div class="amen-big" aria-hidden="true">
+            <div class="amen-layer" data-layer="0"><img src="assets/img/amen-spa-stones.jpg" alt="" loading="lazy"></div>
+            <div class="amen-layer" data-layer="1"><img src="assets/img/amen-pavilion.jpg" alt="" loading="lazy"></div>
+            <div class="amen-layer" data-layer="2"><img src="assets/img/amenity-forest-cabins.jpg" alt="" loading="lazy"></div>
+            <div class="amen-big-shade"></div>
+          </div>
+
+          <div class="amen-side">
+            <p class="caption">(Amenities)</p>
+
+            <div class="amen-small" aria-hidden="true">
+              <img class="is-active" src="assets/img/amen-spa-oil.jpg" alt="" loading="lazy">
+              <img src="assets/img/amen-gym.jpg" alt="" loading="lazy">
+              <img src="assets/img/amen-forest-small.jpg" alt="" loading="lazy">
+            </div>
+
+            <div class="amen-texts">
+              <article class="amen-text is-active">
+                <span class="amen-num">01</span>
+                <h3 class="h6">Wellness, unhurried</h3>
+                <p class="b4 dim">A cedar spa with treatment rooms, a snowmelt cold plunge and a steam room facing the water. Breathwork and yoga on the dock at first light.</p>
+              </article>
+              <article class="amen-text">
+                <span class="amen-num">02</span>
+                <h3 class="h6">Movement &amp; recovery</h3>
+                <p class="b4 dim">A heated lakeside pool open all year, a fitness studio with private coaching, and a ski valet with a first-chair shuttle to the mountain.</p>
+              </article>
+              <article class="amen-text">
+                <span class="amen-num">03</span>
+                <h3 class="h6">Forest retreats</h3>
+                <p class="b4 dim">Three wood-fired sauna cabins along a two-mile trail, with lantern-lit paths and fire circles beneath the pines.</p>
+              </article>
+            </div>
+
+            <div class="amen-progress" aria-hidden="true"><span id="amen-progress-line"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="faq section" id="faq">
+      <div class="wrap faq-wrap">
+        <div class="faq-head">
+          <p class="caption" data-fade>(FAQ)</p>
+          <h2 class="h4" data-split>Before <em>you visit</em></h2>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item" data-fade>
+            <button type="button" class="faq-q" aria-expanded="false">What types of homes are available?<span class="faq-icon" aria-hidden="true"></span></button>
+            <div class="faq-a"><p>Three collections: twelve single-level Shore Pavilions at the waterline, fourteen double-height Ridge Lofts set into the slope, and four Lantern penthouses with rooftop fire terraces.</p></div>
+          </div>
+          <div class="faq-item" data-fade>
+            <button type="button" class="faq-q" aria-expanded="false">Can I live at Vesper year-round?<span class="faq-icon" aria-hidden="true"></span></button>
+            <div class="faq-a"><p>Yes. Every home is built for a full Sierra winter, with radiant floors, heated drives and covered parking. Many owners split their year, and the concierge looks after the house in between.</p></div>
+          </div>
+          <div class="faq-item" data-fade>
+            <button type="button" class="faq-q" aria-expanded="false">Which wellness amenities are included?<span class="faq-icon" aria-hidden="true"></span></button>
+            <div class="faq-a"><p>Owners have unlimited use of the cedar spa, cold plunge, steam room, heated pool, fitness studio and forest saunas. Treatments and private coaching are booked through the concierge.</p></div>
+          </div>
+          <div class="faq-item" data-fade>
+            <button type="button" class="faq-q" aria-expanded="false">How are privacy and security handled?<span class="faq-icon" aria-hidden="true"></span></button>
+            <div class="faq-a"><p>The estate is gated with a staffed entrance around the clock. Homes are spaced and screened by existing forest, and the shoreline is reserved for owners and their guests.</p></div>
+          </div>
+          <div class="faq-item" data-fade>
+            <button type="button" class="faq-q" aria-expanded="false">Can I see a home before it is finished?<span class="faq-icon" aria-hidden="true"></span></button>
+            <div class="faq-a"><p>Yes. Private viewings take place at the sales pavilion and the completed show residence. We recommend a visit in the last hour of daylight.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA / FORM ============ -->
+    <section class="cta" id="visit">
+      <div class="cta-bg" aria-hidden="true">
+        <div class="parallax" data-parallax><img src="assets/img/visit-cabin-sunset.jpg" alt="" loading="lazy"></div>
+      </div>
+      <div class="cta-shade" aria-hidden="true"></div>
+
+      <div class="wrap cta-wrap">
+        <div class="cta-copy">
+          <p class="caption" data-fade>(Private viewing)</p>
+          <h2 class="h3" data-split>Come home <em>at vesper</em></h2>
+          <p class="b1" data-fade>Arrange a private viewing or request the residence brochure. We reply within one working day.</p>
+        </div>
+
+        <div class="form-block" data-fade>
+          <form id='viewing-form' method='POST' name='viewing' novalidate>
+            <input type="hidden" name="form-name" value="viewing">
+            <p class="hp" aria-hidden="true"><label>Company <input name="company" tabindex="-1" autocomplete="off"></label></p>
+
+            <div class="form-grid">
+              <div class="field">
+                <label for="f-name">Full name</label>
+                <input id="f-name" name="name" type="text" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label for="f-email">Email</label>
+                <input id="f-email" name="email" type="email" autocomplete="email" required>
+              </div>
+              <div class="field">
+                <label for="f-phone">Phone <span class="opt">(optional)</span></label>
+                <input id="f-phone" name="phone" type="tel" autocomplete="tel">
+              </div>
+              <div class="field">
+                <label for="f-res">Residence</label>
+                <select id="f-res" name="residence">
+                  <option>Not sure yet</option>
+                  <option>Shore Pavilions</option>
+                  <option>Ridge Lofts</option>
+                  <option>The Lantern</option>
+                </select>
+              </div>
+              <div class="field full">
+                <label for="f-type">I would like</label>
+                <select id="f-type" name="request">
+                  <option>A private viewing at dusk</option>
+                  <option>A daytime viewing</option>
+                  <option>A video walkthrough</option>
+                  <option>The residence brochure</option>
+                </select>
+              </div>
+            </div>
+
+            <label class="consent">
+              <input type="checkbox" name="consent" required>
+              <span>I agree to Vesper using my details to respond to this request.</span>
+            </label>
+
+            <div class="form-foot">
+              <button type="submit" class="btn btn-white btn-lg">Request a viewing</button>
+              <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+
+          <div class="form-success" id="form-success" hidden tabindex="-1">
+            <p class="h6">Thank you.</p>
+            <p class="b4 dim">Your request has been received. A member of our team will be in touch within one working day.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div class="footer-col">
+          <p class="caption">(Get in touch)</p>
+          <a href="#top" class="footer-logo" aria-label="Vesper, back to top">Vesper</a>
+        </div>
+        <div class="footer-cols">
+          <div class="footer-col">
+            <p class="footer-title">Location</p>
+            <p>Incline Village<br>Lake Tahoe, Nevada</p>
+          </div>
+          <div class="footer-col">
+            <p class="footer-title">Contact</p>
+            <p><a href="mailto:hello@vesper.example">hello@vesper.example</a><br><a href="tel:+17750000000">+1 (775) 000-0000</a></p>
+          </div>
+          <div class="footer-col">
+            <p class="footer-title">Residences</p>
+            <p>
+              <button type="button" class="link-btn" data-open-residence="0">Shore Pavilions</button><br>
+              <button type="button" class="link-btn" data-open-residence="1">Ridge Lofts</button><br>
+              <button type="button" class="link-btn" data-open-residence="2">The Lantern</button>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <span class="footer-line" aria-hidden="true"></span>
+
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> Vesper Residences. Concept development; details are illustrative.</p>
+        <p>Photography: Unsplash</p>
+        <a href="#top" class="to-top">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ RESIDENCE MODAL ============ -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" data-lenis-prevent hidden>
+    <div class="modal-inner">
+      <div class="modal-media">
+        <div class="modal-main" id="modal-main"></div>
+        <div class="modal-room">
+          <span class="modal-label" id="modal-label">Living room</span>
+          <span class="modal-area"><span id="modal-area">0</span> sq ft</span>
+          <span class="modal-area-text" id="modal-area-text">total living area</span>
+        </div>
+      </div>
+      <div class="modal-content">
+        <button type="button" class="round-btn modal-close" id="modal-close" aria-label="Close">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+        <p class="caption">(Residence)</p>
+        <h2 class="h5" id="modal-title">Shore Pavilions</h2>
+        <p class="res-specs" id="modal-specs"></p>
+        <p class="b4 dim" id="modal-desc"></p>
+        <div class="modal-thumbs" id="modal-thumbs" role="tablist" aria-label="Rooms"></div>
+        <div class="modal-actions">
+          <span class="modal-price" id="modal-price"></span>
+          <a href="#visit" class="btn btn-white" id="modal-book">Book a visit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/vendor/gsap.min.js"></script>
+  <script src="assets/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/lenis.min.js"></script>
+  <script src="script.js"></script>
+<script async src="/.netlify/scripts/ar" data-netlify-deploy-id="6ad3dae089590445b3a1ba2d" data-netlify-site-id="68d08c43-9292-43c3-b5d6-82e7f81885c2" data-agent-runner-id="6ad3d0b35e25e1df75e3e393"></script>
+</body>
+</html>
