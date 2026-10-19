@@ -225,29 +225,35 @@
     else heroBars[i].style.setProperty("--p", 1);
   }
 
+  // Rotating phrase ("Buy a Home", "Sell Your Home"...) follows the slide.
+  // GSAP drives it like the rest of the hero; the CSS classes are the fallback.
+  if (HAS_GSAP) {
+    heroSwap[0].parentElement.classList.add("is-js");
+    heroSwap.forEach(function (s, k) { gsap.set(s, k === 0 ? { y: 0, yPercent: 0, opacity: 1 } : { y: 0, yPercent: 105, opacity: 0 }); });
+  }
+
+  function swapPhrase(from, to) {
+    heroSwap.forEach(function (s, k) { s.classList.toggle("is-active", k === to); });
+    if (!HAS_GSAP) return;
+    heroSwap.forEach(function (s, k) {
+      if (k === to) {
+        if (ANIM) gsap.fromTo(s, { yPercent: 105, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.9, delay: 0.2, ease: "power3.out", overwrite: true });
+        else gsap.set(s, { yPercent: 0, opacity: 1 });
+      } else if (k === from && ANIM) {
+        gsap.to(s, { yPercent: -105, opacity: 0, duration: 0.5, ease: "power2.in", overwrite: true });
+      } else {
+        gsap.set(s, { yPercent: 105, opacity: 0, overwrite: true });
+      }
+    });
+  }
+
   function showHero(next) {
     var prev = heroSlides[heroIndex];
     var nextSlide = heroSlides[next];
     if (next === heroIndex) return;
+    swapPhrase(heroIndex, next);
     heroIndex = next;
     heroCurrent.textContent = pad(next + 1);
-    // Rotating phrase ("Buy a Home", "Sell Your Home"...) follows the slide
-    heroSwap.forEach(function (s, k) {
-      var wasActive = s.classList.contains("is-active");
-      if (k === next) {
-        s.classList.remove("is-prev");
-        s.classList.add("is-active");
-      } else if (wasActive) {
-        s.classList.remove("is-active");
-        s.classList.add("is-prev");
-      } else if (s.classList.contains("is-prev")) {
-        // Snap back below the mask without sweeping through the visible line
-        s.style.transition = "none";
-        s.classList.remove("is-prev");
-        void s.offsetWidth;
-        s.style.transition = "";
-      }
-    });
     nextSlide.style.zIndex = 2;
     prev.style.zIndex = 1;
     if (ANIM) {
