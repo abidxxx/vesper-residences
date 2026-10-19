@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Vesper Residences — Lakeside Living, Lake Tahoe</title>
-  <meta name="description" content="Vesper is a private collection of thirty lakeside residences on the Nevada shore of Lake Tahoe. Shore Pavilions, Ridge Lofts and The Lantern penthouses.">
+  <title>Triumph Property Management — Las Vegas Property Management, Sales &amp; Rentals</title>
+  <meta name="description" content="Your one-stop shop to buy a home, sell your home, lease your home or find a rental in Las Vegas. Triumph Property Management serves Las Vegas, Henderson, North Las Vegas and Summerlin.">
   <meta name="theme-color" content="#121717">
-  <meta property="og:title" content="Vesper Residences — Lake Tahoe">
-  <meta property="og:description" content="Thirty private homes between the pines and the lake.">
-  <meta property="og:image" content="assets/img/hero-2-modern-bluehour.jpg">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23121717'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-size='42' fill='%23ffffff'%3EV%3C/text%3E%3C/svg%3E">
+  <meta property="og:title" content="Triumph Property Management — Las Vegas">
+  <meta property="og:description" content="Your one-stop shop to buy, sell, lease or rent in Las Vegas.">
+  <meta property="og:image" content="assets/img/hero-strip-bluehour.jpg">
+  <link rel="icon" type="image/svg+xml" href="assets/img/triumph-mark.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -22,10 +22,23 @@
 </head>
 <body>
 
+  <!-- Logo mark (Triumph building), reused via <use> -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="tpm-grad" gradientUnits="userSpaceOnUse" x1="587.87" y1="1712.59" x2="587.87" y2="-2.21">
+        <stop offset="0" stop-color="#00C777"/>
+        <stop offset="1" stop-color="#007042"/>
+      </linearGradient>
+      <symbol id="tpm-mark" viewBox="0 0 1180.3 1714.59">
+        <path fill="url(#tpm-grad)" d="M337.89 823.92l111.87 -108.91 0 902.51 111.87 0 0 -1169.55 57.07 -54.47 0 -284.58 111.87 -108.92 0 1714.59c-149.16,0 -298.32,0 -447.48,0l0 -472.56 54.8 -54.46 0 -363.65zm-337.89 798.86l57.07 -56.21 0 -92.65 111.87 -108.92 0 349.59c-55.55,0 -111.1,0 -166.66,0l-2.28 -91.81zm954.29 -798.86l-111.87 -108.91 0 999.58c112.63,0 225.26,0 337.88,0l0 -240.67 -111.87 -108.92 0 252.5 -114.14 0 0 -793.58z"/>
+      </symbol>
+    </defs>
+  </svg>
+
   <!-- ============ PRELOADER ============ -->
   <div class="loader" aria-hidden="true">
     <div class="loader-inner">
-      <span class="loader-mark">Vesper</span>
+      <span class="loader-mark"><svg class="loader-icon"><use href="#tpm-mark"/></svg>Triumph</span>
       <span class="loader-count"><span id="loader-num">0</span>%</span>
     </div>
     <span class="loader-line"><span></span></span>
@@ -36,16 +49,24 @@
   <!-- ============ HEADER ============ -->
   <header class="header" id="header">
     <div class="wrap header-wrap">
-      <a href="#top" class="logo" aria-label="Vesper Residences, back to top">Vesper</a>
+      <a href="#top" class="logo" aria-label="Triumph Property Management, back to top">
+        <svg class="logo-mark" aria-hidden="true"><use href="#tpm-mark"/></svg>
+        <span class="logo-text" aria-hidden="true">
+          <span class="logo-name">Triumph</span>
+          <span class="logo-sub">Property Management</span>
+        </span>
+      </a>
 
-      <nav class="nav" aria-label="Residences">
-        <button type="button" class="nav-link" data-open-residence="0">Shore Pavilions</button>
-        <button type="button" class="nav-link" data-open-residence="1">Ridge Lofts</button>
-        <button type="button" class="nav-link" data-open-residence="2">The Lantern</button>
+      <nav class="nav" aria-label="Main">
+        <a href="#services" class="nav-link">Buy &amp; Sell</a>
+        <button type="button" class="nav-link" data-open-residence="2">Owners</button>
+        <button type="button" class="nav-link" data-open-residence="3">Rentals</button>
+        <a href="#about" class="nav-link">About</a>
       </nav>
 
       <div class="header-right">
-        <a href="#visit" class="btn btn-white header-btn">Book a visit</a>
+        <a href="tel:+17023672323" class="header-phone">702.367.2323</a>
+        <a href="#contact" class="btn btn-white header-btn">Contact</a>
         <button type="button" class="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
           <span></span><span></span>
         </button>
@@ -56,54 +77,173 @@
 
   <div class="menu" id="menu" data-lenis-prevent hidden>
     <nav class="menu-nav" aria-label="Mobile">
+      <a href="#services">Services</a>
       <a href="#about">About</a>
-      <a href="#residences">Residences</a>
-      <a href="#philosophy">Philosophy</a>
-      <a href="#amenities">Amenities</a>
+      <a href="#team">Team</a>
+      <a href="#awards">Awards</a>
+      <a href="#blog">Blog</a>
       <a href="#faq">FAQ</a>
-      <a href="#visit">Book a visit</a>
+      <a href="#contact">Contact</a>
     </nav>
-    <p class="menu-foot">Incline Village · Lake Tahoe · Nevada</p>
+    <p class="menu-foot">
+      <a href="https://triumphpm.appfolio.com/oportal/users/log_in" target="_blank" rel="noopener">Owner Portal</a> ·
+      <a href="https://triumphpm.appfolio.com/connect/users/sign_in" target="_blank" rel="noopener">Tenant Portal</a> ·
+      <a href="tel:+17023672323">702.367.2323</a>
+    </p>
   </div>
 
   <main id="main">
 
     <!-- ============ HERO ============ -->
-    <section class="hero" id="top" aria-label="Vesper Residences">
+    <section class="hero" id="top" aria-label="Triumph Property Management">
       <div class="hero-media" aria-hidden="true">
         <div class="hero-slide is-active"><img src="assets/img/hero-2-modern-bluehour.jpg" alt=""></div>
         <div class="hero-slide"><img src="assets/img/hero-dusk-house.jpg" alt="" loading="lazy"></div>
-        <div class="hero-slide"><img src="assets/img/hero-1-timber-dusk.jpg" alt="" loading="lazy"></div>
+        <div class="hero-slide"><img src="assets/img/home-modern-dusk.jpg" alt="" loading="lazy"></div>
+        <div class="hero-slide"><img src="assets/img/hero-strip-bluehour.jpg" alt="" loading="lazy"></div>
       </div>
       <div class="hero-shade" aria-hidden="true"></div>
       <div class="grain" aria-hidden="true"></div>
 
       <div class="wrap hero-wrap">
         <div class="hero-index" aria-hidden="true">
-          <span class="hero-count"><span id="hero-current">01</span> / 03</span>
-          <span class="hero-bars"><i></i><i></i><i></i></span>
+          <span class="hero-count"><span id="hero-current">01</span> / 04</span>
+          <span class="hero-bars"><i></i><i></i><i></i><i></i></span>
         </div>
 
         <div class="hero-bottom">
-          <h1 class="hero-title" aria-label="Vesper">
-            <span class="hero-chars" aria-hidden="true"><span><span>V</span></span><span><span>E</span></span><span><span>S</span></span><span><span>P</span></span><span><span>E</span></span><span><span>R</span></span></span>
+          <h1 class="hero-title" aria-label="Triumph Property Management">
+            <span class="hero-chars" aria-hidden="true"><span><span>T</span></span><span><span>R</span></span><span><span>I</span></span><span><span>U</span></span><span><span>M</span></span><span><span>P</span></span><span><span>H</span></span></span>
           </h1>
 
           <div class="hero-right">
-            <p class="hero-right-heading" data-hero="words">Quiet luxury<br>at the water’s edge</p>
-            <p class="hero-text" data-hero="text">Thirty private homes on the Nevada shore of Lake Tahoe, where architecture steps back so the water, the pines and the evening light can lead.</p>
-            <a href="#about" class="scroll-cue" data-hero="scroll"><span class="scroll-cue-line" aria-hidden="true"></span>Scroll</a>
+            <p class="hero-right-heading" data-hero="words">Your one-stop shop to</p>
+            <p class="hero-swap" data-hero="swap">
+              <span class="hero-swap-words" aria-hidden="true"><span class="is-active">Buy a Home</span><span>Sell Your Home</span><span>Lease Your Home</span><span>Find a Rental</span></span>
+              <span class="visually-hidden">Buy a home, sell your home, lease your home or find a rental</span>
+              <span class="hero-swap-tail">in Las Vegas.</span>
+            </p>
+            <div class="hero-tabs" data-hero="tabs">
+              <button type="button" class="hero-tab" data-open-residence="0">Buyers</button>
+              <button type="button" class="hero-tab" data-open-residence="1">Sellers</button>
+              <button type="button" class="hero-tab" data-open-residence="2">Owners</button>
+              <button type="button" class="hero-tab" data-open-residence="3">Tenants</button>
+            </div>
+            <a href="#services" class="scroll-cue" data-hero="scroll"><span class="scroll-cue-line" aria-hidden="true"></span>Scroll</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ ABOUT ============ -->
+    <!-- ============ SERVICES ============ -->
+    <section class="residences section" id="services" aria-roledescription="carousel" aria-label="Services">
+      <div class="wrap">
+        <div class="res-head">
+          <div>
+            <p class="caption" data-fade>(Buyers · Sellers · Owners · Tenants)</p>
+            <h2 class="h4" data-split>Your one-stop shop <em>in Las Vegas</em></h2>
+          </div>
+          <div class="res-controls" data-fade>
+            <span class="res-counter"><span id="res-current">01</span> / 04</span>
+            <button type="button" class="round-btn" id="res-prev" aria-label="Previous service">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+            </button>
+            <button type="button" class="round-btn" id="res-next" aria-label="Next service">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="res-stage" id="res-stage">
+        <div class="res-slide" data-index="0" role="group" aria-label="1 of 4">
+          <div class="res-img"><img src="assets/img/res-shore-main.jpg" alt="A modern living room opening onto a terrace pool" loading="lazy"></div>
+        </div>
+        <div class="res-slide" data-index="1" role="group" aria-label="2 of 4">
+          <div class="res-img"><img src="assets/img/res-ridge-main.jpg" alt="A staged great room with full-height windows" loading="lazy"></div>
+        </div>
+        <div class="res-slide" data-index="2" role="group" aria-label="3 of 4">
+          <div class="res-img"><img src="assets/img/res-lantern-penthouse.jpg" alt="A professionally managed living space with a walnut feature wall" loading="lazy"></div>
+        </div>
+        <div class="res-slide" data-index="3" role="group" aria-label="4 of 4">
+          <div class="res-img"><img src="assets/img/vegas-skyline-night.jpg" alt="The Las Vegas skyline at night" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="wrap res-info" aria-live="polite">
+        <div class="res-info-main">
+          <h3 class="h5 res-title" id="res-title">Investing in Real Estate</h3>
+          <p class="res-specs" id="res-specs">Buyers · Investors · Luxury homes &amp; high-rise condos</p>
+        </div>
+        <div class="res-info-side">
+          <p class="b4 dim res-desc" id="res-desc">Triumph Property Management is an investment company specializing in Property Investments – a brand you can trust when it comes to securing your assets. Investing can be risky or rewarding, depending on where you choose to place your investment.</p>
+          <button type="button" class="btn btn-stroke" id="res-explore">Buy a Home</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TRUSTED BY THE BEST ============ -->
+    <section class="clients section" id="clients" aria-labelledby="clients-title">
+      <div class="wrap clients-head">
+        <p class="caption" data-fade>(Our clients)</p>
+        <h2 class="h4" id="clients-title" data-split>Trusted <em>by the best</em></h2>
+        <p class="b1 clients-text" data-fade>Triumph Property Management is trusted by leading companies &amp; organizations, proudly serving some of the best in the industry.</p>
+      </div>
+
+      <div class="marquee" data-fade>
+        <ul class="marquee-track">
+          <li><img src="assets/img/clients/the-jewish-identity-center.png" alt="The Jewish Identity Center" loading="lazy"></li>
+          <li><img src="assets/img/clients/chabad.png" alt="Chabad" loading="lazy"></li>
+          <li><img src="assets/img/clients/bet-yossef.png" alt="Bet Yossef" loading="lazy"></li>
+          <li><img src="assets/img/clients/summerlin-hospital.png" alt="Summerlin Hospital" loading="lazy"></li>
+          <li><img src="assets/img/clients/bank-of-nevada.png" alt="Bank of Nevada" loading="lazy"></li>
+          <li><img src="assets/img/clients/sunwest-financial-services.png" alt="Sunwest Financial Services" loading="lazy"></li>
+          <li><img class="logo-tone" src="assets/img/clients/wells-fargo.png" alt="Wells Fargo" loading="lazy"></li>
+          <li><img src="assets/img/clients/chase.png" alt="Chase" loading="lazy"></li>
+          <li><img class="logo-tone" src="assets/img/clients/department-of-air-force.png" alt="Department of the Air Force" loading="lazy"></li>
+          <li><img src="assets/img/clients/remax.png" alt="RE/MAX" loading="lazy"></li>
+          <li><img class="logo-tone" src="assets/img/clients/inspiring-the-jewish-future.png" alt="Inspiring the Jewish Future" loading="lazy"></li>
+          <li><img src="assets/img/clients/chicago-title-insurance-company.png" alt="Chicago Title Insurance Company" loading="lazy"></li>
+          <li><img src="assets/img/clients/fontainebleau-las-vegas.png" alt="Fontainebleau Las Vegas" loading="lazy"></li>
+          <li><img src="assets/img/clients/red-rock-resort-casino-spa.png" alt="Red Rock Resort Casino Spa" loading="lazy"></li>
+          <li><img src="assets/img/clients/bellagio-las-vegas.png" alt="Bellagio Las Vegas" loading="lazy"></li>
+          <li><img src="assets/img/clients/resorts-world-las-vegas.png" alt="Resorts World Las Vegas" loading="lazy"></li>
+          <li><img src="assets/img/clients/mgm-grand.png" alt="MGM Grand" loading="lazy"></li>
+          <li><img src="assets/img/clients/aria-resort-casino-las-vegas.png" alt="Aria Resort Casino Las Vegas" loading="lazy"></li>
+          <li><img src="assets/img/clients/caesars-palace-las-vegas.png" alt="Caesars Palace Las Vegas" loading="lazy"></li>
+          <li><img src="assets/img/clients/the-cosmopolitan-of-las-vegas.png" alt="The Cosmopolitan of Las Vegas" loading="lazy"></li>
+          <li><img src="assets/img/clients/trump-international-hotel-las-vegas.png" alt="Trump International Hotel Las Vegas" loading="lazy"></li>
+          <li><img src="assets/img/clients/the-cromwell-las-vegas.png" alt="The Cromwell Las Vegas" loading="lazy"></li>
+          <li><img src="assets/img/clients/encore-wynn-las-vegas.png" alt="Encore Wynn Las Vegas" loading="lazy"></li>
+          <li><img src="assets/img/clients/circa-resort-casino.png" alt="Circa Resort Casino" loading="lazy"></li>
+          <li><img src="assets/img/clients/luxor-las-vegas.png" alt="Luxor Las Vegas" loading="lazy"></li>
+          <li><img src="assets/img/clients/golden-nugget-hotel-casinos.png" alt="Golden Nugget Hotel Casinos" loading="lazy"></li>
+          <li><img src="assets/img/clients/the-linq-las-vegas.png" alt="The LINQ Las Vegas" loading="lazy"></li>
+          <li><img src="assets/img/clients/mirage-las-vegas.png" alt="Mirage Las Vegas" loading="lazy"></li>
+          <li><img src="assets/img/clients/palazzo-las-vegas.png" alt="Palazzo Las Vegas" loading="lazy"></li>
+          <li><img src="assets/img/clients/flamingo-las-vegas.png" alt="Flamingo Las Vegas" loading="lazy"></li>
+          <li><img src="assets/img/clients/paris-las-vegas.png" alt="Paris Las Vegas" loading="lazy"></li>
+          <li><img src="assets/img/clients/new-york-new-york-las-vegas-hotels-casino.png" alt="New York-New York Las Vegas Hotel &amp; Casino" loading="lazy"></li>
+          <li><img src="assets/img/clients/planet-hollywood-las-vegas.png" alt="Planet Hollywood Las Vegas" loading="lazy"></li>
+          <li><img src="assets/img/clients/mandalay-bay-resort-casino-las-vegas.png" alt="Mandalay Bay Resort Casino Las Vegas" loading="lazy"></li>
+          <li><img src="assets/img/clients/rio-las-vegas-hotel-and-casino.png" alt="Rio Las Vegas Hotel and Casino" loading="lazy"></li>
+          <li><img src="assets/img/clients/stratosphere-las-vegas.png" alt="Stratosphere Las Vegas" loading="lazy"></li>
+          <li><img src="assets/img/clients/waldorf-astoria-las-vegas.png" alt="Waldorf Astoria Las Vegas" loading="lazy"></li>
+          <li><img src="assets/img/clients/vdara-las-vegas.png" alt="Vdara Las Vegas" loading="lazy"></li>
+          <li><img src="assets/img/clients/treasure-island-las-vegas.png" alt="Treasure Island Las Vegas" loading="lazy"></li>
+          <li><img src="assets/img/clients/excalibur-hotel-casino-las-vegas-hotel.png" alt="Excalibur Hotel Casino Las Vegas" loading="lazy"></li>
+          <li><img src="assets/img/clients/delano-las-vegas.png" alt="Delano Las Vegas" loading="lazy"></li>
+          <li><img src="assets/img/clients/circus-circus-las-vegas.png" alt="Circus Circus Las Vegas" loading="lazy"></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ WE ARE TRIUMPH ============ -->
     <section class="about section" id="about">
       <div class="wrap">
         <div class="about-head">
           <p class="caption" data-fade>(About)</p>
-          <h2 class="h4" data-split>Architecture shaped <em>by water and pine</em></h2>
+          <h2 class="h4" data-split>We are Triumph, <em>transparency is key</em></h2>
         </div>
 
         <div class="about-grid">
@@ -112,158 +252,132 @@
           </figure>
 
           <div class="about-text">
-            <p class="b1" data-fade>Vesper occupies sixty-two acres of protected Jeffrey pine above a private stretch of shoreline. Every home faces the water, and none is visible from another.</p>
-            <p class="b4 dim" data-fade>We built fewer homes so each could be better: hand-oiled cedar, Sierra granite, glass that disappears in summer and walls that make winter feel like a choice. Concierge, ski valet and a lakeside spa are part of everyday life here, not an occasion.</p>
+            <p class="b1" data-fade>At Triumph, transparency is key. The team keeps clients informed with regular, detailed updates, making them feel present without stepping on-site; a level of communication that builds trust and long-term relationships.</p>
+            <p class="b4 dim" data-fade>What sets Triumph apart? Cutting-edge technology and a dedicated team. From automated maintenance requests to online tenant portals, Triumph leverages tech to streamline processes. This, combined with a team of professionals who own their roles, ensures top-notch service and client satisfaction.</p>
 
             <dl class="stats">
-              <div data-fade><dt><span data-count="30">30</span></dt><dd>private residences</dd></div>
-              <div data-fade><dt><span data-count="62">62</span><small>acres</small></dt><dd>of protected forest</dd></div>
-              <div data-fade><dt><span data-count="400">400</span><small>ft</small></dt><dd>of private shoreline</dd></div>
-              <div data-fade><dt>24/7</dt><dd>concierge &amp; ski valet</dd></div>
+              <div data-fade><dt>2008</dt><dd>matching Las Vegas renters with quality homes since</dd></div>
+              <div data-fade><dt><span data-count="12">12</span></dt><dd>dedicated team members</dd></div>
+              <div data-fade><dt><span data-count="18">18</span></dt><dd>awards &amp; certifications</dd></div>
+              <div data-fade><dt><span data-count="42">42</span></dt><dd>leading organizations served</dd></div>
             </dl>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ RESIDENCES ============ -->
-    <section class="residences section" id="residences" aria-roledescription="carousel" aria-label="Residences">
-      <div class="wrap">
-        <div class="res-head">
-          <div>
-            <p class="caption" data-fade>(Our residences)</p>
-            <h2 class="h4" data-split>Three ways <em>to live by the lake</em></h2>
-          </div>
-          <div class="res-controls" data-fade>
-            <span class="res-counter"><span id="res-current">01</span> / 03</span>
-            <button type="button" class="round-btn" id="res-prev" aria-label="Previous residence">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
-            </button>
-            <button type="button" class="round-btn" id="res-next" aria-label="Next residence">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div class="res-stage" id="res-stage">
-        <div class="res-slide" data-index="0" role="group" aria-label="1 of 3">
-          <div class="res-img"><img src="assets/img/res-shore-main.jpg" alt="Shore Pavilion living room opening to a terrace pool" loading="lazy"></div>
-        </div>
-        <div class="res-slide" data-index="1" role="group" aria-label="2 of 3">
-          <div class="res-img"><img src="assets/img/res-ridge-main.jpg" alt="Ridge Loft great room with a timber ceiling and full-height windows" loading="lazy"></div>
-        </div>
-        <div class="res-slide" data-index="2" role="group" aria-label="3 of 3">
-          <div class="res-img"><img src="assets/img/res-lantern-penthouse.jpg" alt="Lantern penthouse living space with a walnut feature wall" loading="lazy"></div>
-        </div>
-      </div>
-
-      <div class="wrap res-info" aria-live="polite">
-        <div class="res-info-main">
-          <h3 class="h5 res-title" id="res-title">Shore Pavilions</h3>
-          <p class="res-specs" id="res-specs">3–4 bedrooms · 3,400–4,100 sq ft · 12 homes</p>
-        </div>
-        <div class="res-info-side">
-          <p class="b4 dim res-desc" id="res-desc">Single-level homes set at the waterline. In summer the glass walls slide away completely, and the terrace, pool and lake become one long room.</p>
-          <button type="button" class="btn btn-stroke" id="res-explore">Explore residence</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ PHILOSOPHY ============ -->
-    <section class="philosophy section" id="philosophy">
+    <!-- ============ WHAT SETS US APART ============ -->
+    <section class="philosophy section" id="approach">
       <div class="wrap">
         <div class="philo-head">
-          <p class="caption" data-fade>(Our philosophy)</p>
-          <h2 class="h3" data-split>A life in tune <em>with the lake</em></h2>
+          <p class="caption" data-fade>(What sets Triumph apart)</p>
+          <h2 class="h3" data-split>Cutting-edge technology <em>and a dedicated team</em></h2>
         </div>
 
         <figure class="philo-img img-frame" data-reveal>
-          <div class="parallax" data-parallax><img src="assets/img/beliefs-forest-cabin.jpg" alt="A cabin glowing warmly among tall pines at night" loading="lazy"></div>
+          <div class="parallax" data-parallax><img src="assets/img/strip-light-trails.jpg" alt="Light trails along the Las Vegas Strip at night" loading="lazy"></div>
         </figure>
 
-        <p class="philo-mission b0" data-split>We believe a home should feel like the landscape it belongs to: <em>calm, unhurried</em> and built to last for generations.</p>
+        <p class="philo-mission b0" data-split>From automated maintenance requests to online tenant portals, <em>Triumph leverages tech</em> to streamline every step for owners and tenants.</p>
 
         <ol class="values" data-stagger>
           <li class="value is-open" tabindex="0">
-            <div class="value-bg"><img src="assets/img/hour-0600-first-light.jpg" alt="" loading="lazy"></div>
+            <div class="value-bg"><img src="assets/img/desert-dusk-mountains.jpg" alt="" loading="lazy"></div>
             <span class="value-num">01</span>
-            <h3 class="value-title">Stillness</h3>
-            <p class="value-text">Rooms face the quietest views and are acoustically separated, so silence is part of the architecture.</p>
+            <h3 class="value-title">Transparency</h3>
+            <p class="value-text">Regular, detailed updates keep you informed, so you feel present without stepping on-site.</p>
           </li>
           <li class="value" tabindex="0">
-            <div class="value-bg"><img src="assets/img/belief-forest.jpg" alt="" loading="lazy"></div>
+            <div class="value-bg"><img src="assets/img/strip-night-vertical.jpg" alt="" loading="lazy"></div>
             <span class="value-num">02</span>
-            <h3 class="value-title">Privacy</h3>
-            <p class="value-text">Gated grounds, a staffed entrance and homes screened by old-growth pine. Discretion is designed in, not added later.</p>
+            <h3 class="value-title">Technology</h3>
+            <p class="value-text">Online leases, virtual showings, automated maintenance requests and 24/7 owner and tenant portals.</p>
           </li>
           <li class="value" tabindex="0">
-            <div class="value-bg"><img src="assets/img/res-ridge-lofts.jpg" alt="" loading="lazy"></div>
+            <div class="value-bg"><img src="assets/img/red-rock-bluehour.jpg" alt="" loading="lazy"></div>
             <span class="value-num">03</span>
-            <h3 class="value-title">Craft</h3>
-            <p class="value-text">Hand-oiled cedar, Sierra granite and bronze hardware, chosen to age gracefully rather than stay new.</p>
+            <h3 class="value-title">Dedicated team</h3>
+            <p class="value-text">Professionals who own their roles across leasing, maintenance, accounting and management.</p>
           </li>
           <li class="value" tabindex="0">
-            <div class="value-bg"><img src="assets/img/hour-2200-lanterns.jpg" alt="" loading="lazy"></div>
+            <div class="value-bg"><img src="assets/img/strip-aerial-vertical.jpg" alt="" loading="lazy"></div>
             <span class="value-num">04</span>
-            <h3 class="value-title">Community</h3>
-            <p class="value-text">A small circle of owners, shared suppers at the boathouse and a concierge who knows your name.</p>
+            <h3 class="value-title">Local</h3>
+            <p class="value-text">Homes across Las Vegas, Henderson, North Las Vegas and Summerlin, handled with care since 2008.</p>
           </li>
           <li class="value" tabindex="0">
-            <div class="value-bg"><img src="assets/img/belief-valley.jpg" alt="" loading="lazy"></div>
+            <div class="value-bg"><img src="assets/img/red-rock-storm.jpg" alt="" loading="lazy"></div>
             <span class="value-num">05</span>
-            <h3 class="value-title">Stewardship</h3>
-            <p class="value-text">Land held in conservation, solar-assisted energy and a shoreline restored with native planting.</p>
+            <h3 class="value-title">Excellence</h3>
+            <p class="value-text">BBB accredited, NARPM members and named Best Property Management Company – Las Vegas.</p>
           </li>
         </ol>
-
-        <div class="philo-close">
-          <p class="b1" data-fade>Home is a reflection of what we value. At Vesper that means light over spectacle, nature over noise and time spent well.</p>
-          <figure class="philo-close-a img-frame" data-reveal>
-            <div class="parallax" data-parallax><img src="assets/img/hour-1800-vesper.jpg" alt="Mountain peaks above a sea of cloud at sunset" loading="lazy"></div>
-          </figure>
-          <figure class="philo-close-b img-frame" data-reveal>
-            <div class="parallax" data-parallax><img src="assets/img/room-lantern-bedroom.jpg" alt="A dark, calm bedroom with a velvet headboard and brass lamp" loading="lazy"></div>
-          </figure>
-        </div>
       </div>
     </section>
 
-    <!-- ============ AMENITIES (pinned scroll scene) ============ -->
-    <section class="amenities" id="amenities">
+    <!-- ============ TEAM ============ -->
+    <section class="team section" id="team" aria-labelledby="team-title">
+      <div class="wrap">
+        <div class="team-head">
+          <div>
+            <p class="caption" data-fade>(Our team)</p>
+            <h2 class="h4" id="team-title" data-split>Professionals <em>who own their roles</em></h2>
+          </div>
+          <p class="b4 dim team-intro" data-fade>A team of professionals leading the way, with separate departments for leasing, maintenance, accounting and management working together on every property.</p>
+        </div>
+
+        <ul class="team-grid" data-stagger>
+          <li class="member"><div class="member-img"><img src="assets/img/team/kamyar-zargari.jpg" alt="Kamyar Zargari" loading="lazy"></div><h3 class="member-name">Kamyar Zargari</h3><p class="member-role">Owner &amp; CEO, Broker</p></li>
+          <li class="member"><div class="member-img"><img src="assets/img/team/shantal-miller.jpg" alt="Shantal Miller" loading="lazy"></div><h3 class="member-name">Shantal Miller</h3><p class="member-role">COO, REALTOR®</p></li>
+          <li class="member"><div class="member-img"><img src="assets/img/team/ashley-herbes.jpg" alt="Ashley Herbes" loading="lazy"></div><h3 class="member-name">Ashley Herbes</h3><p class="member-role">Property Manager, REALTOR®</p></li>
+          <li class="member"><div class="member-img"><img src="assets/img/team/noelle-delanty.jpg" alt="Noelle Delanty" loading="lazy"></div><h3 class="member-name">Noelle Delanty</h3><p class="member-role">Executive Assistant</p></li>
+          <li class="member"><div class="member-img"><img src="assets/img/team/corinne-sarmiento.jpg" alt="Corinne Sarmiento" loading="lazy"></div><h3 class="member-name">Corinne Sarmiento</h3><p class="member-role">Repairs Coordinator</p></li>
+          <li class="member"><div class="member-img"><img src="assets/img/team/aaron-rodriguez.jpg" alt="Aaron Rodriguez" loading="lazy"></div><h3 class="member-name">Aaron Rodriguez</h3><p class="member-role">Vacancies Coordinator</p></li>
+          <li class="member"><div class="member-img"><img src="assets/img/team/madison-modglin.jpg" alt="Madison Modglin" loading="lazy"></div><h3 class="member-name">Madison Modglin</h3><p class="member-role">Vacancies Coordinator</p></li>
+          <li class="member"><div class="member-img"><img src="assets/img/team/vincent-gerold.jpg" alt="Vincent Gerold" loading="lazy"></div><h3 class="member-name">Vincent Gerold</h3><p class="member-role">Vacancies Coordinator</p></li>
+          <li class="member"><div class="member-img"><img src="assets/img/team/edson-velazquez.jpg" alt="Edson Velazquez" loading="lazy"></div><h3 class="member-name">Edson Velazquez</h3><p class="member-role">Bookkeeper</p></li>
+          <li class="member"><div class="member-img"><img src="assets/img/team/herlyn-dumaicos.jpg" alt="Herlyn Dumaicos" loading="lazy"></div><h3 class="member-name">Herlyn Dumaicos</h3><p class="member-role">Onboarding Director</p></li>
+          <li class="member"><div class="member-img"><img src="assets/img/team/karina-rojas.jpg" alt="Karina Rojas" loading="lazy"></div><h3 class="member-name">Karina Rojas</h3><p class="member-role">Accounting Director</p></li>
+          <li class="member"><div class="member-img"><img src="assets/img/team/alexa-martinez.jpg" alt="Alexa Martinez" loading="lazy"></div><h3 class="member-name">Alexa Martinez</h3><p class="member-role">Receptionist</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ HOW WE WORK (pinned scroll scene) ============ -->
+    <section class="amenities" id="how-we-work">
       <div class="amen-track" id="amen-track">
         <div class="amen-sticky">
           <div class="amen-big" aria-hidden="true">
-            <div class="amen-layer" data-layer="0"><img src="assets/img/amen-spa-stones.jpg" alt="" loading="lazy"></div>
-            <div class="amen-layer" data-layer="1"><img src="assets/img/amen-pavilion.jpg" alt="" loading="lazy"></div>
-            <div class="amen-layer" data-layer="2"><img src="assets/img/amenity-forest-cabins.jpg" alt="" loading="lazy"></div>
+            <div class="amen-layer" data-layer="0"><img src="assets/img/amen-pavilion.jpg" alt="" loading="lazy"></div>
+            <div class="amen-layer" data-layer="1"><img src="assets/img/pool-night.jpg" alt="" loading="lazy"></div>
+            <div class="amen-layer" data-layer="2"><img src="assets/img/vegas-valley-sunset.jpg" alt="" loading="lazy"></div>
             <div class="amen-big-shade"></div>
           </div>
 
           <div class="amen-side">
-            <p class="caption">(Amenities)</p>
+            <p class="caption">(How we work)</p>
 
             <div class="amen-small" aria-hidden="true">
-              <img class="is-active" src="assets/img/amen-spa-oil.jpg" alt="" loading="lazy">
-              <img src="assets/img/amen-gym.jpg" alt="" loading="lazy">
-              <img src="assets/img/amen-forest-small.jpg" alt="" loading="lazy">
+              <img class="is-active" src="assets/img/room-shore-kitchen.jpg" alt="" loading="lazy">
+              <img src="assets/img/room-shore-bath.jpg" alt="" loading="lazy">
+              <img src="assets/img/room-lantern-suite.jpg" alt="" loading="lazy">
             </div>
 
             <div class="amen-texts">
               <article class="amen-text is-active">
                 <span class="amen-num">01</span>
-                <h3 class="h6">Wellness, unhurried</h3>
-                <p class="b4 dim">A cedar spa with treatment rooms, a snowmelt cold plunge and a steam room facing the water. Breathwork and yoga on the dock at first light.</p>
+                <h3 class="h6">For owners</h3>
+                <p class="b4 dim">Full-service management: marketing, tenant selection, maintenance, accounting and eviction, with monthly and annual owner statements and a real-time financial dashboard.</p>
               </article>
               <article class="amen-text">
                 <span class="amen-num">02</span>
-                <h3 class="h6">Movement &amp; recovery</h3>
-                <p class="b4 dim">A heated lakeside pool open all year, a fitness studio with private coaching, and a ski valet with a first-chair shuttle to the mountain.</p>
+                <h3 class="h6">Maintenance, handled</h3>
+                <p class="b4 dim">Tenants submit requests online and our team assigns and tracks every work order with qualified vendors. Emergency maintenance issues are addressed 24/7.</p>
               </article>
               <article class="amen-text">
                 <span class="amen-num">03</span>
-                <h3 class="h6">Forest retreats</h3>
-                <p class="b4 dim">Three wood-fired sauna cabins along a two-mile trail, with lantern-lit paths and fire circles beneath the pines.</p>
+                <h3 class="h6">For tenants</h3>
+                <p class="b4 dim">Pay rent, submit maintenance requests and review lease documents 24/7 in the online tenant portal. Applications are typically processed within 1–3 business days.</p>
               </article>
             </div>
 
@@ -273,56 +387,114 @@
       </div>
     </section>
 
+    <!-- ============ RECOGNIZED FOR EXCELLENCE ============ -->
+    <section class="awards section" id="awards" aria-labelledby="awards-title">
+      <div class="wrap">
+        <div class="awards-head">
+          <div>
+            <p class="caption" data-fade>(Awards &amp; certifications)</p>
+            <h2 class="h4" id="awards-title" data-split>Recognized <em>for excellence</em></h2>
+          </div>
+          <p class="b4 dim awards-intro" data-fade>Triumph Property Management is recognized for excellence, honored with prestigious awards and certificates in the industry.</p>
+        </div>
+
+        <ul class="awards-grid" data-stagger>
+          <li><img class="logo-tone" src="assets/img/awards/realtors-multiple-listing-service.png" alt="REALTORS® Multiple Listing Service" loading="lazy"></li>
+          <li><img class="logo-tone" src="assets/img/awards/better-business-bureau-accredited-business.png" alt="Better Business Bureau Accredited Business" loading="lazy"></li>
+          <li><img src="assets/img/awards/fair-housing-equal-opportunity.png" alt="Fair Housing &amp; Equal Opportunity" loading="lazy"></li>
+          <li><img src="assets/img/awards/realtor-political-action-committee.png" alt="Realtor Political Action Committee" loading="lazy"></li>
+          <li><img src="assets/img/awards/best-of-2026-business-rate.png" alt="Best of 2026 Award Winner, Business Rate" loading="lazy"></li>
+          <li><img src="assets/img/awards/icsc-certified-member.png" alt="ICSC Certified Member" loading="lazy"></li>
+          <li><img src="assets/img/awards/certified-residential-specialist-crs.png" alt="Certified Residential Specialist (CRS)" loading="lazy"></li>
+          <li><img src="assets/img/awards/narpm-national-association-of-residential-property-managers.png" alt="NARPM, National Association of Residential Property Managers" loading="lazy"></li>
+          <li><img src="assets/img/awards/seller-representative-specialist.png" alt="Seller Representative Specialist" loading="lazy"></li>
+          <li><img src="assets/img/awards/greater-las-vegas-association-of-realtors.png" alt="Greater Las Vegas Association of REALTORS®" loading="lazy"></li>
+          <li><img src="assets/img/awards/official-member-forbes-real-estate-council.png" alt="Official Member, Forbes Real Estate Council" loading="lazy"></li>
+          <li><img class="logo-tone" src="assets/img/awards/best-agent-awards-2020.png" alt="Best Agent Awards 2020" loading="lazy"></li>
+          <li><img src="assets/img/awards/top-100-men-in-re-accolade-2018.png" alt="Top 100 Men of Real Estate, My Vegas" loading="lazy"></li>
+          <li><img src="assets/img/awards/best-of-las-vegas-realtor-journal.png" alt="Best of Las Vegas, Realtor Journal" loading="lazy"></li>
+          <li><img src="assets/img/awards/young-professionals-network.png" alt="Young Professionals Network" loading="lazy"></li>
+          <li><img src="assets/img/awards/las-vegas-top-100-men-of-the-year.png" alt="Las Vegas Top 100 Men of the Year" loading="lazy"></li>
+          <li><img class="logo-tone" src="assets/img/awards/best-property-management-company-las-vegas-2019.png" alt="Best Property Management Company, Las Vegas, 2019" loading="lazy"></li>
+          <li><img class="logo-tone" src="assets/img/awards/best-of-business-rate-2025.png" alt="Best of Business Rate, Las Vegas, 2025" loading="lazy"></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ BLOG ============ -->
+    <section class="blog section" id="blog" aria-labelledby="blog-title">
+      <div class="wrap">
+        <div class="blog-head">
+          <div>
+            <p class="caption" data-fade>(Latest updates)</p>
+            <h2 class="h4" id="blog-title" data-split>From <em>our blog</em></h2>
+          </div>
+          <a href="https://triumphpropertymanagement.com/blog/" class="btn btn-stroke" target="_blank" rel="noopener" data-fade>Read our blog</a>
+        </div>
+
+        <ul class="blog-list">
+          <li data-fade><a class="post" href="https://triumphpropertymanagement.com/manage-belongings-large-house-into-apartment/" target="_blank" rel="noopener"><time class="post-date" datetime="2026-10-11">11 October 2026</time><span class="post-title">How Renters Can Manage Belongings When Moving From a Large House Into an Apartment</span><span class="post-arrow" aria-hidden="true">→</span></a></li>
+          <li data-fade><a class="post" href="https://triumphpropertymanagement.com/moving-into-a-rental-with-extreme-summer-heat/" target="_blank" rel="noopener"><time class="post-date" datetime="2026-09-13">13 September 2026</time><span class="post-title">Moving Into a Rental With Extreme Summer Heat: What to Ask About Before You Sign the Lease</span><span class="post-arrow" aria-hidden="true">→</span></a></li>
+          <li data-fade><a class="post" href="https://triumphpropertymanagement.com/fast-move-ins-often-lead-to-longer-term-tenant-issues/" target="_blank" rel="noopener"><time class="post-date" datetime="2026-05-31">31 May 2026</time><span class="post-title">Why “Fast Move-Ins” Often Lead to Longer-Term Tenant Issues</span><span class="post-arrow" aria-hidden="true">→</span></a></li>
+          <li data-fade><a class="post" href="https://triumphpropertymanagement.com/as-is-clause/" target="_blank" rel="noopener"><time class="post-date" datetime="2026-04-28">28 April 2026</time><span class="post-title">“As Is” Clause in Real Estate: 7 Critical Facts Protecting Buyers in 2026</span><span class="post-arrow" aria-hidden="true">→</span></a></li>
+        </ul>
+      </div>
+    </section>
+
     <!-- ============ FAQ ============ -->
     <section class="faq section" id="faq">
       <div class="wrap faq-wrap">
         <div class="faq-head">
           <p class="caption" data-fade>(FAQ)</p>
-          <h2 class="h4" data-split>Before <em>you visit</em></h2>
+          <h2 class="h4" data-split>Questions <em>we hear often</em></h2>
         </div>
 
         <div class="faq-list">
           <div class="faq-item" data-fade>
-            <button type="button" class="faq-q" aria-expanded="false">What types of homes are available?<span class="faq-icon" aria-hidden="true"></span></button>
-            <div class="faq-a"><p>Three collections: twelve single-level Shore Pavilions at the waterline, fourteen double-height Ridge Lofts set into the slope, and four Lantern penthouses with rooftop fire terraces.</p></div>
+            <button type="button" class="faq-q" aria-expanded="false">What type of properties do you manage?<span class="faq-icon" aria-hidden="true"></span></button>
+            <div class="faq-a"><p>Luxury homes and mansions, single-family homes, condos, townhomes, multi-unit apartments, office buildings and commercial strip centers.</p></div>
           </div>
           <div class="faq-item" data-fade>
-            <button type="button" class="faq-q" aria-expanded="false">Can I live at Vesper year-round?<span class="faq-icon" aria-hidden="true"></span></button>
-            <div class="faq-a"><p>Yes. Every home is built for a full Sierra winter, with radiant floors, heated drives and covered parking. Many owners split their year, and the concierge looks after the house in between.</p></div>
+            <button type="button" class="faq-q" aria-expanded="false">What is your property management fee?<span class="faq-icon" aria-hidden="true"></span></button>
+            <div class="faq-a"><p>8% of the monthly rent, or 7% once you have three or more properties with us. There are no setup fees and no hidden fees.</p></div>
           </div>
           <div class="faq-item" data-fade>
-            <button type="button" class="faq-q" aria-expanded="false">Which wellness amenities are included?<span class="faq-icon" aria-hidden="true"></span></button>
-            <div class="faq-a"><p>Owners have unlimited use of the cedar spa, cold plunge, steam room, heated pool, fitness studio and forest saunas. Treatments and private coaching are booked through the concierge.</p></div>
+            <button type="button" class="faq-q" aria-expanded="false">What part of Las Vegas do you manage?<span class="faq-icon" aria-hidden="true"></span></button>
+            <div class="faq-a"><p>All of Clark County, including Las Vegas, Summerlin, Henderson and North Las Vegas.</p></div>
           </div>
           <div class="faq-item" data-fade>
-            <button type="button" class="faq-q" aria-expanded="false">How are privacy and security handled?<span class="faq-icon" aria-hidden="true"></span></button>
-            <div class="faq-a"><p>The estate is gated with a staffed entrance around the clock. Homes are spaced and screened by existing forest, and the shoreline is reserved for owners and their guests.</p></div>
+            <button type="button" class="faq-q" aria-expanded="false">How soon can you start managing my property?<span class="faq-icon" aria-hidden="true"></span></button>
+            <div class="faq-a"><p>As soon as the management agreement is signed, which can be done electronically. If the property is not leased within 90 days while marketed at fair market value, you can cancel with no cancellation fee.</p></div>
           </div>
           <div class="faq-item" data-fade>
-            <button type="button" class="faq-q" aria-expanded="false">Can I see a home before it is finished?<span class="faq-icon" aria-hidden="true"></span></button>
-            <div class="faq-a"><p>Yes. Private viewings take place at the sales pavilion and the completed show residence. We recommend a visit in the last hour of daylight.</p></div>
+            <button type="button" class="faq-q" aria-expanded="false">What are the requirements to rent a Triumph home?<span class="faq-icon" aria-hidden="true"></span></button>
+            <div class="faq-a"><p>A credit score of 650 or higher, verifiable income of at least 3x the monthly rent, a clean rental history with no prior evictions and a satisfactory background check. All adult occupants must apply.</p></div>
+          </div>
+          <div class="faq-item" data-fade>
+            <button type="button" class="faq-q" aria-expanded="false">When is rent due?<span class="faq-icon" aria-hidden="true"></span></button>
+            <div class="faq-a"><p>Rent is due on the 1st of each month and is paid through the secure online tenant portal by ACH bank transfer or credit/debit card.</p></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ CTA / FORM ============ -->
-    <section class="cta" id="visit">
+    <!-- ============ CONTACT / FORM ============ -->
+    <section class="cta" id="contact">
       <div class="cta-bg" aria-hidden="true">
-        <div class="parallax" data-parallax><img src="assets/img/visit-cabin-sunset.jpg" alt="" loading="lazy"></div>
+        <div class="parallax" data-parallax><img src="assets/img/vegas-valley-sunset.jpg" alt="" loading="lazy"></div>
       </div>
       <div class="cta-shade" aria-hidden="true"></div>
 
       <div class="wrap cta-wrap">
         <div class="cta-copy">
-          <p class="caption" data-fade>(Private viewing)</p>
-          <h2 class="h3" data-split>Come home <em>at vesper</em></h2>
-          <p class="b1" data-fade>Arrange a private viewing or request the residence brochure. We reply within one working day.</p>
+          <p class="caption" data-fade>(Contact)</p>
+          <h2 class="h3" data-split>Let’s talk <em>about your property</em></h2>
+          <p class="b1" data-fade>Fill out our contact form and we will get back to you very shortly. Prefer to call? <a href="tel:+17023672323">702.367.2323</a></p>
         </div>
 
         <div class="form-block" data-fade>
-          <form id='viewing-form' method='POST' name='viewing' novalidate>
-            <input type="hidden" name="form-name" value="viewing">
+          <form id='viewing-form' method='POST' name='contact' novalidate>
+            <input type="hidden" name="form-name" value="contact">
             <p class="hp" aria-hidden="true"><label>Company <input name="company" tabindex="-1" autocomplete="off"></label></p>
 
             <div class="form-grid">
@@ -339,39 +511,41 @@
                 <input id="f-phone" name="phone" type="tel" autocomplete="tel">
               </div>
               <div class="field">
-                <label for="f-res">Residence</label>
-                <select id="f-res" name="residence">
+                <label for="f-res">Service</label>
+                <select id="f-res" name="service">
                   <option>Not sure yet</option>
-                  <option>Shore Pavilions</option>
-                  <option>Ridge Lofts</option>
-                  <option>The Lantern</option>
+                  <option>Buy a Home</option>
+                  <option>Sell Your Home</option>
+                  <option>Property Management</option>
+                  <option>Find a Rental</option>
                 </select>
               </div>
               <div class="field full">
-                <label for="f-type">I would like</label>
-                <select id="f-type" name="request">
-                  <option>A private viewing at dusk</option>
-                  <option>A daytime viewing</option>
-                  <option>A video walkthrough</option>
-                  <option>The residence brochure</option>
+                <label for="f-type">I am a</label>
+                <select id="f-type" name="role">
+                  <option>Property owner</option>
+                  <option>Investor</option>
+                  <option>Home buyer</option>
+                  <option>Home seller</option>
+                  <option>Tenant / renter</option>
                 </select>
               </div>
             </div>
 
             <label class="consent">
               <input type="checkbox" name="consent" required>
-              <span>I agree to Vesper using my details to respond to this request.</span>
+              <span>I agree to be contacted by Triumph Property Management via call, email and text for real estate services.</span>
             </label>
 
             <div class="form-foot">
-              <button type="submit" class="btn btn-white btn-lg">Request a viewing</button>
+              <button type="submit" class="btn btn-white btn-lg">Send request</button>
               <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
             </div>
           </form>
 
           <div class="form-success" id="form-success" hidden tabindex="-1">
             <p class="h6">Thank you.</p>
-            <p class="b4 dim">Your request has been received. A member of our team will be in touch within one working day.</p>
+            <p class="b4 dim">Your request has been received. We will get back to you very shortly.</p>
           </div>
         </div>
       </div>
@@ -384,61 +558,104 @@
       <div class="footer-top">
         <div class="footer-col">
           <p class="caption">(Get in touch)</p>
-          <a href="#top" class="footer-logo" aria-label="Vesper, back to top">Vesper</a>
+          <a href="#top" class="footer-logo" aria-label="Triumph Property Management, back to top"><svg class="footer-mark" aria-hidden="true"><use href="#tpm-mark"/></svg><span aria-hidden="true">Triumph</span></a>
+          <ul class="socials">
+            <li><a href="https://www.facebook.com/profile.php?id=61578921419644" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="https://www.instagram.com/triumph.lv/" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/company/triumph-property-management" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://www.youtube.com/user/TriumphPropertyMgt" target="_blank" rel="noopener">YouTube</a></li>
+            <li><a href="https://www.tiktok.com/@triumphpropm" target="_blank" rel="noopener">TikTok</a></li>
+          </ul>
         </div>
         <div class="footer-cols">
           <div class="footer-col">
-            <p class="footer-title">Location</p>
-            <p>Incline Village<br>Lake Tahoe, Nevada</p>
-          </div>
-          <div class="footer-col">
             <p class="footer-title">Contact</p>
-            <p><a href="mailto:hello@vesper.example">hello@vesper.example</a><br><a href="tel:+17750000000">+1 (775) 000-0000</a></p>
+            <p><a href="tel:+17023672323">702.367.2323</a><br><a href="mailto:contact@triumphpm.com">contact@triumphpm.com</a></p>
           </div>
           <div class="footer-col">
-            <p class="footer-title">Residences</p>
-            <p>
-              <button type="button" class="link-btn" data-open-residence="0">Shore Pavilions</button><br>
-              <button type="button" class="link-btn" data-open-residence="1">Ridge Lofts</button><br>
-              <button type="button" class="link-btn" data-open-residence="2">The Lantern</button>
-            </p>
+            <p class="footer-title">Head office</p>
+            <p>1 Meridian Vista Dr.<br>Las Vegas, Nevada 89135</p>
           </div>
+          <div class="footer-col">
+            <p class="footer-title">Mailing address</p>
+            <p>9030 W Sahara Ave, Suite 668<br>Las Vegas, Nevada 89117</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <p class="footer-title">Owners</p>
+          <ul>
+            <li><button type="button" class="link-btn" data-open-residence="0">Buy a Home</button></li>
+            <li><button type="button" class="link-btn" data-open-residence="1">Sell Your Home</button></li>
+            <li><button type="button" class="link-btn" data-open-residence="2">Property Management</button></li>
+            <li><a href="https://triumphpropertymanagement.com/accounting-reports/" target="_blank" rel="noopener">Accounting Reports</a></li>
+            <li><a href="https://triumphpropertymanagement.com/maintenance-performance-analysis-report/" target="_blank" rel="noopener">Performance Report</a></li>
+            <li><a href="https://triumphpropertymanagement.com/eviction/" target="_blank" rel="noopener">Eviction</a></li>
+            <li><a href="https://triumphpropertymanagement.com/owner-resources/" target="_blank" rel="noopener">Owner Resources</a></li>
+            <li><a href="https://triumphpm.appfolio.com/oportal/users/log_in" target="_blank" rel="noopener">Owner Portal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-title">Tenants</p>
+          <ul>
+            <li><a href="https://triumphpropertymanagement.com/rental-process/" target="_blank" rel="noopener">Rental Process</a></li>
+            <li><button type="button" class="link-btn" data-open-residence="3">Find a Rental</button></li>
+            <li><a href="https://triumphpropertymanagement.com/tenant-portal-fee/" target="_blank" rel="noopener">Tenant Portal Fee</a></li>
+            <li><a href="https://triumphpropertymanagement.com/pay-rent-here/" target="_blank" rel="noopener">Pay Rent Here</a></li>
+            <li><a href="https://triumphpropertymanagement.com/tenant-resources/" target="_blank" rel="noopener">Tenant Resources</a></li>
+            <li><a href="https://triumphpropertymanagement.com/maintenance-guide/" target="_blank" rel="noopener">Maintenance Guide</a></li>
+            <li><a href="https://triumphpm.appfolio.com/connect/users/sign_in" target="_blank" rel="noopener">Tenant Portal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-title">Information</p>
+          <ul>
+            <li><a href="#about">About us</a></li>
+            <li><a href="https://triumphpropertymanagement.com/environmental-impact/" target="_blank" rel="noopener">Environmental Impact</a></li>
+            <li><a href="https://triumphpropertymanagement.com/agent-referrals/" target="_blank" rel="noopener">Agent Referrals</a></li>
+            <li><a href="https://triumphpropertymanagement.com/brochures-media/" target="_blank" rel="noopener">Brochures &amp; Media</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </div>
       </div>
 
       <span class="footer-line" aria-hidden="true"></span>
 
       <div class="footer-bottom">
-        <p>© <span id="year">2026</span> Vesper Residences. Concept development; details are illustrative.</p>
-        <p>Photography: Unsplash</p>
+        <p>Copyright © <span id="year">2026</span> Triumph Property Management. All Rights Reserved. License: B.1000830.Corp</p>
+        <p><a href="https://triumphpropertymanagement.com/terms-of-use/" target="_blank" rel="noopener">Terms of Use</a> · <a href="https://triumphpropertymanagement.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></p>
         <a href="#top" class="to-top">Back to top ↑</a>
       </div>
     </div>
   </footer>
 
-  <!-- ============ RESIDENCE MODAL ============ -->
+  <!-- ============ SERVICE MODAL ============ -->
   <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" data-lenis-prevent hidden>
     <div class="modal-inner">
       <div class="modal-media">
         <div class="modal-main" id="modal-main"></div>
         <div class="modal-room">
-          <span class="modal-label" id="modal-label">Living room</span>
-          <span class="modal-area"><span id="modal-area">0</span> sq ft</span>
-          <span class="modal-area-text" id="modal-area-text">total living area</span>
+          <span class="modal-label" id="modal-label"></span>
+          <span class="modal-area"><span id="modal-pre"></span><span id="modal-area">0</span><span id="modal-unit"></span></span>
+          <span class="modal-area-text" id="modal-area-text"></span>
         </div>
       </div>
       <div class="modal-content">
         <button type="button" class="round-btn modal-close" id="modal-close" aria-label="Close">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
         </button>
-        <p class="caption">(Residence)</p>
-        <h2 class="h5" id="modal-title">Shore Pavilions</h2>
+        <p class="caption">(Service)</p>
+        <h2 class="h5" id="modal-title">Investing in Real Estate</h2>
         <p class="res-specs" id="modal-specs"></p>
         <p class="b4 dim" id="modal-desc"></p>
-        <div class="modal-thumbs" id="modal-thumbs" role="tablist" aria-label="Rooms"></div>
+        <div class="modal-thumbs" id="modal-thumbs" role="tablist" aria-label="Highlights"></div>
         <div class="modal-actions">
           <span class="modal-price" id="modal-price"></span>
-          <a href="#visit" class="btn btn-white" id="modal-book">Book a visit</a>
+          <a href="#contact" class="btn btn-white" id="modal-book">Get in touch</a>
         </div>
       </div>
     </div>

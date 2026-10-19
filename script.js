@@ -1,5 +1,5 @@
 /* =========================================================
-   Vesper Residences — interactions & motion
+   Triumph Property Management — interactions & motion
    GSAP 3.12.5 + ScrollTrigger + Lenis 1.1.13 (vendored)
    ========================================================= */
 (function () {
@@ -20,41 +20,65 @@
      DATA
      ======================================================= */
 
+  // Services shown in the carousel and modal, in the same order as the hero
+  // tabs (Buyers, Sellers, Owners, Tenants). `cta` labels the carousel button,
+  // `form` is the matching option in the contact form. A room's `stat` counts
+  // up when it contains a number ("8%", "$0", "650+"); otherwise it is shown as is.
   var RESIDENCES = [
     {
-      name: "Shore Pavilions",
-      specs: "3–4 bedrooms · 3,400–4,100 sq ft · 12 homes",
-      desc: "Single-level homes set at the waterline. In summer the glass walls slide away completely, and the terrace, pool and lake become one long room.",
-      price: "From $6.8M",
+      name: "Investing in Real Estate",
+      cta: "Buy a Home",
+      form: "Buy a Home",
+      specs: "Buyers · Investors · Luxury homes & high-rise condos",
+      desc: "Triumph Property Management is an investment company specializing in Property Investments – a brand you can trust when it comes to securing your assets. Investing can be risky or rewarding, depending on where you choose to place your investment.",
+      price: "Licensed Nevada brokerage",
       rooms: [
-        { label: "Living room", img: "assets/img/res-shore-main.jpg", area: 620, text: "total living area" },
-        { label: "Primary bedroom", img: "assets/img/room-shore-bedroom.jpg", area: 340, text: "total bedroom area" },
-        { label: "Bathroom", img: "assets/img/room-shore-bath.jpg", area: 160, text: "total bathroom area" },
-        { label: "Kitchen", img: "assets/img/room-shore-kitchen.jpg", area: 280, text: "total kitchen area" }
+        { label: "Las Vegas", img: "assets/img/res-shore-main.jpg", stat: "Since 2008", fixed: true, text: "an easy, reliable and professional transaction" },
+        { label: "Market access", img: "assets/img/room-shore-bedroom.jpg", stat: "MLS", text: "REALTORS® Multiple Listing Service members" },
+        { label: "Investors", img: "assets/img/room-shore-bath.jpg", stat: "7%", text: "management fee once you own three or more properties" },
+        { label: "Certified", img: "assets/img/room-shore-kitchen.jpg", stat: "CRS", text: "Certified Residential Specialist" }
       ]
     },
     {
-      name: "Ridge Lofts",
-      specs: "2–3 bedrooms · 2,200–2,900 sq ft · 14 homes",
-      desc: "Double-height living set into the slope and framed on three sides by pines. Morning light on the water, evening light on the ridge.",
-      price: "From $3.9M",
+      name: "Selling Your Property",
+      cta: "Sell your Home",
+      form: "Sell Your Home",
+      specs: "Marketing · First-class service · Exposure",
+      desc: "Marketing plays a vital role in property sales by leveraging multimedia strategies to enhance visibility, drive sales, and attract tenants. As a management company, we help you Market Your Property to potential buyers, maximizing its reach and appeal.",
+      price: "Sell your home in just 3 steps",
       rooms: [
-        { label: "Great room", img: "assets/img/res-ridge-main.jpg", area: 540, text: "total great room area" },
-        { label: "Family room", img: "assets/img/res-ridge-lofts.jpg", area: 380, text: "total family room area" },
-        { label: "Bedroom", img: "assets/img/room-ridge-bedroom.jpg", area: 290, text: "total bedroom area" },
-        { label: "Library", img: "assets/img/about-living-fireplace.jpg", area: 210, text: "total library area" }
+        { label: "Step 1 · Marketing", img: "assets/img/res-ridge-main.jpg", stat: "1", text: "representing your home in all its glory" },
+        { label: "Step 2 · First-class service", img: "assets/img/res-ridge-lofts.jpg", stat: "2", text: "a smooth and stress-free process" },
+        { label: "Step 3 · Exposure", img: "assets/img/room-ridge-bedroom.jpg", stat: "3", text: "significant exposure for fewer days on the market" },
+        { label: "Certified", img: "assets/img/about-living-fireplace.jpg", stat: "SRS", text: "Seller Representative Specialist" }
       ]
     },
     {
-      name: "The Lantern",
-      specs: "4 bedrooms · 5,200 sq ft · 4 penthouses",
-      desc: "Four penthouses crowning the lodge, each with a private rooftop fire terrace and uninterrupted views across the lake to the Sierra.",
-      price: "From $11.5M",
+      name: "Full-Service Property Management",
+      cta: "Property Management",
+      form: "Property Management",
+      specs: "Single-family · Condos · Multi-family · Commercial",
+      desc: "A Local Property Management Service is essential for streamlining your business. With our team of professionals leading the way, you’ll seize every lucrative opportunity by partnering with one of the Top Property Management services in the United States.",
+      price: "7–8% management fee",
       rooms: [
-        { label: "Living room", img: "assets/img/res-lantern-penthouse.jpg", area: 860, text: "total living area" },
-        { label: "Primary suite", img: "assets/img/room-lantern-bedroom.jpg", area: 520, text: "total suite area" },
-        { label: "Guest suite", img: "assets/img/room-lantern-suite.jpg", area: 360, text: "total suite area" },
-        { label: "Fire terrace", img: "assets/img/hour-1800-vesper.jpg", area: 700, text: "total terrace area" }
+        { label: "Management fee", img: "assets/img/res-lantern-penthouse.jpg", stat: "8%", text: "of monthly rent, 7% for three or more properties" },
+        { label: "Hidden fees", img: "assets/img/room-lantern-bedroom.jpg", stat: "0%", text: "no setup fees and transparent vendor invoices" },
+        { label: "Inspections", img: "assets/img/home-modern-dusk.jpg", stat: "$0", text: "for move-in and move-out inspections" },
+        { label: "Owner statements", img: "assets/img/room-lantern-suite.jpg", stat: "12", text: "monthly statements a year, plus annual reports and tax forms" }
+      ]
+    },
+    {
+      name: "Las Vegas Homes for Rent",
+      cta: "Find A Rental",
+      form: "Find a Rental",
+      specs: "Las Vegas · Henderson · North Las Vegas · Summerlin",
+      desc: "Looking for Rental Homes in Las Vegas? We have rental properties in Clark County to find the home and area you’re looking for. Find well maintained properties which are handled with care.",
+      price: "Apply online",
+      rooms: [
+        { label: "Applications", img: "assets/img/vegas-skyline-night.jpg", stat: "1–3 days", text: "typical processing time for a complete application" },
+        { label: "Credit score", img: "assets/img/room-shore-bedroom.jpg", stat: "650+", text: "with a clean rental history and no prior evictions" },
+        { label: "Income", img: "assets/img/pool-night.jpg", stat: "3x", text: "the monthly rent, verified" },
+        { label: "Tenant portal", img: "assets/img/strip-night-vertical.jpg", stat: "24/7", text: "pay rent, request repairs and review lease documents" }
       ]
     }
   ];
@@ -178,6 +202,7 @@
      ======================================================= */
 
   var heroSlides = $$(".hero-slide");
+  var heroSwap = $$(".hero-swap-words > span");
   var heroBars = $$(".hero-bars i");
   var heroCurrent = $("#hero-current");
   var heroIndex = 0;
@@ -206,6 +231,11 @@
     if (next === heroIndex) return;
     heroIndex = next;
     heroCurrent.textContent = pad(next + 1);
+    // Rotating phrase ("Buy a Home", "Sell Your Home"...) follows the slide
+    heroSwap.forEach(function (s, k) {
+      s.classList.toggle("is-prev", s.classList.contains("is-active") && k !== next);
+      s.classList.toggle("is-active", k === next);
+    });
     nextSlide.style.zIndex = 2;
     prev.style.zIndex = 1;
     if (ANIM) {
@@ -242,8 +272,9 @@
     tl.fromTo(".hero-slide", { scale: 1.22 }, { scale: 1, duration: 2.6, ease: "power2.out" }, 0)
       .to(chars, { yPercent: 0, duration: 1.6, stagger: 0.08, ease: "power4.out" }, 0.2)
       .to(words, { opacity: 1, y: 0, rotationX: 0, duration: 1, stagger: 0.04 }, 1.0)
-      .to('[data-hero="text"]', { opacity: 1, y: 0, duration: 1.2 }, 1.25)
-      .to('[data-hero="scroll"]', { opacity: 1, y: 0, duration: 0.8 }, 1.6)
+      .to('[data-hero="swap"]', { opacity: 1, y: 0, duration: 1.2 }, 1.2)
+      .to('[data-hero="tabs"] > *', { opacity: 1, y: 0, duration: 0.8, stagger: 0.06 }, 1.4)
+      .to('[data-hero="scroll"]', { opacity: 1, y: 0, duration: 0.8 }, 1.7)
       .to(header, { opacity: 1, yPercent: 0, duration: 0.9 }, 1.5)
       .to(".header-line", { scaleX: 1, duration: 1.4, ease: "expo.out" }, 1.8)
       .to(".hero-index", { opacity: 1, y: 0, duration: 0.8 }, 1.9);
@@ -255,7 +286,7 @@
   function heroInitialState() {
     gsap.set(".hero-chars > span > span", { yPercent: 115 });
     gsap.set(splitWords($('[data-hero="words"]')), { opacity: 0, y: 30, rotationX: -45, transformOrigin: "50% 100%" });
-    gsap.set(['[data-hero="text"]', '[data-hero="scroll"]'], { opacity: 0, y: 30 });
+    gsap.set(['[data-hero="swap"]', '[data-hero="tabs"] > *', '[data-hero="scroll"]'], { opacity: 0, y: 30 });
     gsap.set(header, { opacity: 0, yPercent: -100 });
     gsap.set(".header-line", { scaleX: 0 });
     gsap.set(".hero-index", { opacity: 0, y: -10 });
@@ -445,6 +476,7 @@
   function updateResText(i, dir) {
     var r = RESIDENCES[i];
     resCurrent.textContent = pad(i + 1);
+    $("#res-explore").textContent = r.cta;
     if (!ANIM) {
       resTitle.textContent = r.name; resSpecs.textContent = r.specs; resDesc.textContent = r.desc;
       return;
@@ -567,6 +599,8 @@
   var modalLabel = $("#modal-label");
   var modalArea = $("#modal-area");
   var modalAreaText = $("#modal-area-text");
+  var modalPre = $("#modal-pre");
+  var modalUnit = $("#modal-unit");
   var modalRes = 0;
   var modalRoom = 0;
   var modalOpener = null;
@@ -593,7 +627,15 @@
     }
     modalLabel.textContent = room.label;
     modalAreaText.textContent = room.text;
-    countUp(modalArea, room.area, 1.2);
+    var m = !room.fixed && /^(\D*)(\d+)(.*)$/.exec(room.stat);
+    if (m) {
+      modalPre.textContent = m[1];
+      modalUnit.textContent = m[3];
+      countUp(modalArea, parseInt(m[2], 10), 1.2);
+    } else {
+      modalPre.textContent = modalUnit.textContent = "";
+      modalArea.textContent = room.stat;
+    }
   }
 
   function openModal(index, opener) {
@@ -646,10 +688,10 @@
   $("#modal-book").addEventListener("click", function (e) {
     e.preventDefault();
     e.stopPropagation();
-    var name = RESIDENCES[modalRes].name;
+    var service = RESIDENCES[modalRes].form;
     closeModal(function () {
-      $("#f-res").value = name;
-      scrollToTarget($("#visit"));
+      $("#f-res").value = service;
+      scrollToTarget($("#contact"));
       setTimeout(function () { $("#f-name").focus({ preventScroll: true }); }, 1400);
     });
   });
@@ -798,6 +840,22 @@
   }
 
   /* =======================================================
+     CLIENT LOGOS (infinite marquee)
+     ======================================================= */
+
+  // Duplicate the logos once so the CSS loop (translate -50%) is seamless.
+  // Always runs: the client row is meant to keep scrolling in one line.
+  $$(".marquee-track").forEach(function (track) {
+    Array.prototype.slice.call(track.children).forEach(function (li) {
+      var c = li.cloneNode(true);
+      c.setAttribute("aria-hidden", "true");
+      c.querySelector("img").alt = "";
+      track.appendChild(c);
+    });
+    track.parentElement.classList.add("is-looping");
+  });
+
+  /* =======================================================
      FAQ
      ======================================================= */
 
@@ -867,7 +925,7 @@
     }).catch(function () {
       btn.disabled = false;
       msg.className = "form-msg err";
-      msg.textContent = "Sorry, that did not send. Please email hello@vesper.example.";
+      msg.textContent = "Sorry, that did not send. Please email contact@triumphpm.com or call 702.367.2323.";
     });
   });
 

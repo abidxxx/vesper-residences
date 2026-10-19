@@ -1,5 +1,5 @@
 /* =========================================================
-   Vesper Residences
+   Triumph Property Management
    Dark cinematic theme: teal-black, white tints, deep green
    ========================================================= */
 
@@ -241,7 +241,12 @@ em { font-style: italic; }
   text-transform: uppercase;
   letter-spacing: 0.4em;
   color: var(--w70);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
 }
+
+.loader-icon { width: 1.4rem; height: 2rem; }
 
 .loader-count {
   font-family: var(--serif);
@@ -307,14 +312,35 @@ em { font-style: italic; }
 
 .header.is-scrolled .header-line { opacity: 0; }
 
+.sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+
 .logo {
   justify-self: start;
-  font-family: var(--serif);
-  font-size: 1.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
   line-height: 1;
+}
+
+.logo-mark { width: 1.6rem; height: 2.3rem; flex: none; }
+
+.logo-text { display: flex; flex-direction: column; gap: 0.35rem; }
+
+.logo-name {
+  font-family: var(--serif);
+  font-size: 1.45rem;
   text-transform: uppercase;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.16em;
+  margin-right: -0.16em;
   font-variation-settings: "opsz" 144;
+}
+
+.logo-sub {
+  font-size: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--w70);
+  white-space: nowrap;
 }
 
 .nav { display: flex; gap: clamp(1.5rem, 2.6vw, 2.75rem); }
@@ -503,7 +529,7 @@ em { font-style: italic; }
 .hero-title {
   font-family: var(--serif);
   font-weight: 300;
-  font-size: clamp(5.2rem, 16.5vw, 18rem);
+  font-size: clamp(4.2rem, 13vw, 14.5rem);
   line-height: 0.82;
   letter-spacing: -0.06em;
   margin-left: -0.05em;
@@ -515,7 +541,7 @@ em { font-style: italic; }
 .hero-chars > span > span { display: inline-block; will-change: transform; }
 
 .hero-right {
-  width: min(22rem, 100%);
+  width: min(23rem, 100%);
   flex: none;
   display: flex;
   flex-direction: column;
@@ -1111,15 +1137,19 @@ em { font-style: italic; }
 }
 
 .footer-logo {
-  display: block;
+  display: flex;
+  align-items: flex-end;
+  gap: 0.12em;
   font-family: var(--serif);
-  font-size: clamp(4.5rem, 14vw, 13rem);
+  font-size: clamp(3.2rem, 9.5vw, 9rem);
   line-height: 0.85;
   letter-spacing: -0.06em;
   text-transform: uppercase;
   font-variation-settings: "opsz" 144;
   margin-left: -0.04em;
 }
+
+.footer-mark { width: 0.56em; height: 0.82em; flex: none; margin-bottom: 0.02em; }
 
 .footer-cols { display: flex; gap: clamp(2rem, 5vw, 5rem); color: var(--w80); font-size: 0.95rem; line-height: 1.7; }
 .footer-cols a, .footer-cols .link-btn { color: var(--w80); transition: color 0.3s; }
@@ -1254,7 +1284,239 @@ em { font-style: italic; }
 
 .modal-price { font-family: var(--serif); font-style: italic; font-size: 1.6rem; }
 
+/* ---------- Utilities ---------- */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.header-phone {
+  font-family: var(--serif);
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  color: var(--w80);
+  margin-right: 0.5rem;
+  transition: color 0.3s;
+}
+.header-phone:hover { color: var(--white); }
+
+/* ---------- Hero: rotating phrase + audience tabs ---------- */
+
+.hero-swap {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 3vw, 2.9rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-top: -0.6rem;
+}
+
+.hero-swap-words { display: grid; overflow: hidden; padding-bottom: 0.08em; }
+
+.hero-swap-words > span {
+  grid-area: 1 / 1;
+  font-style: italic;
+  transform: translateY(105%);
+  transition: transform 0.9s var(--ease);
+}
+
+.hero-swap-words > span.is-active { transform: none; transition-delay: 0.15s; }
+.hero-swap-words > span.is-prev { transform: translateY(-105%); }
+
+.hero-swap-tail { display: block; font-size: 0.55em; letter-spacing: 0; color: var(--w80); margin-top: 0.35rem; }
+
+.hero-tabs { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+.hero-tab {
+  padding: 0.45rem 0.8rem;
+  border: 1px solid var(--w50);
+  border-radius: 100vmax;
+  font-family: var(--serif);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition: background-color 0.4s var(--ease), color 0.4s var(--ease), border-color 0.4s var(--ease);
+}
+.hero-tab:hover { background: var(--white); border-color: var(--white); color: var(--black); }
+
+/* ---------- Clients (logo marquee) ---------- */
+
+.clients { overflow: hidden; }
+
+.clients-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 26rem);
+  align-items: end;
+  column-gap: 3rem;
+  margin-bottom: clamp(3rem, 6vw, 5.5rem);
+}
+.clients-head .caption { grid-column: 1 / -1; }
+.clients-text { color: var(--w70); }
+
+.marquee {
+  overflow: hidden;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--w10);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+}
+.marquee + .marquee { border-bottom: 1px solid var(--w10); }
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+  gap: clamp(2.5rem, 5vw, 4.5rem);
+  width: max-content;
+  margin: 0;
+  padding: 0 clamp(1.25rem, 2.5vw, 2.25rem);
+  list-style: none;
+}
+
+.marquee:not(.is-looping) .marquee-track { flex-wrap: wrap; width: auto; justify-content: center; row-gap: 1.5rem; }
+
+/* Logos rendered as white silhouettes so the mixed brand colors sit quietly on the dark page */
+.marquee-track img {
+  height: clamp(2.6rem, 4vw, 3.6rem);
+  width: auto;
+  max-width: none;
+  filter: brightness(0) invert(1);
+  opacity: 0.55;
+  transition: opacity 0.4s;
+}
+.marquee-track li:hover img { opacity: 1; }
+
+.marquee { border-bottom: 1px solid var(--w10); }
+.marquee.is-looping .marquee-track { animation: marquee 110s linear infinite; }
+.marquee.is-looping:hover .marquee-track { animation-play-state: paused; }
+
+@keyframes marquee { to { transform: translateX(-50%); } }
+
+/* ---------- Team ---------- */
+
+.team-head, .awards-head, .blog-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem 4rem;
+  flex-wrap: wrap;
+  margin-bottom: clamp(3rem, 5vw, 5rem);
+}
+.team-intro, .awards-intro { max-width: 26rem; }
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(2rem, 3vw, 3rem) clamp(1rem, 2vw, 2rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.member-img { aspect-ratio: 4 / 5; overflow: hidden; background: var(--black-2); margin-bottom: 1.1rem; }
+
+/* Headshots are graded to match the site, color returns on hover */
+.member-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 20%;
+  filter: grayscale(1) brightness(0.72) contrast(1.12);
+  transform: scale(1.04);
+  transition: filter 0.8s var(--ease), transform 1.2s var(--ease);
+}
+.member:hover .member-img img { filter: grayscale(0) brightness(0.9) contrast(1.05); transform: scale(1); }
+
+.member-name { font-family: var(--serif); font-size: clamp(1.25rem, 1.6vw, 1.6rem); line-height: 1.15; letter-spacing: -0.01em; }
+.member-role { margin-top: 0.35rem; font-size: 0.875rem; color: var(--w70); }
+
+/* ---------- Awards ---------- */
+
+.awards { border-top: 1px solid var(--w10); }
+
+.awards-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--w20);
+  border-left: 1px solid var(--w20);
+}
+
+.awards-grid li {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  padding: 1.5rem;
+  border-right: 1px solid var(--w20);
+  border-bottom: 1px solid var(--w20);
+  transition: background-color 0.5s var(--ease);
+}
+.awards-grid li:hover { background: var(--black-2); }
+
+.awards-grid img {
+  max-height: 4.5rem;
+  max-width: 100%;
+  width: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.6;
+  transition: opacity 0.4s;
+}
+.awards-grid li:hover img { opacity: 1; }
+
+/* Badges drawn as solid shapes would turn into white blocks, so they get a muted grayscale instead */
+.marquee-track img.logo-tone, .awards-grid img.logo-tone { filter: grayscale(1) brightness(1.1) contrast(1.05); opacity: 0.6; }
+.marquee-track li:hover img.logo-tone, .awards-grid li:hover img.logo-tone { opacity: 0.95; }
+
+/* ---------- Blog ---------- */
+
+.blog-list { margin: 0; padding: 0; list-style: none; border-bottom: 1px solid var(--w20); }
+
+.post {
+  display: grid;
+  grid-template-columns: 11rem minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 2rem;
+  padding: 1.9rem 0;
+  border-top: 1px solid var(--w20);
+  transition: color 0.4s;
+}
+
+.post-date { font-size: 0.875rem; color: var(--w70); font-variant-numeric: tabular-nums; }
+.post-title { font-family: var(--serif); font-size: clamp(1.3rem, 2.1vw, 2rem); line-height: 1.2; letter-spacing: -0.01em; }
+.post-arrow { font-size: 1.4rem; transition: transform 0.5s var(--ease); }
+.post:hover .post-title { color: var(--w80); }
+.post:hover .post-arrow { transform: translateX(0.5rem); }
+
+/* ---------- Footer extras ---------- */
+
+.socials { display: flex; flex-wrap: wrap; gap: 0.4rem 1.25rem; margin: 1.75rem 0 0; padding: 0; list-style: none; font-size: 0.875rem; }
+.socials a, .footer-links a, .footer-links .link-btn { color: var(--w70); transition: color 0.3s; }
+.socials a:hover, .footer-links a:hover, .footer-links .link-btn:hover { color: var(--white); }
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 14rem));
+  gap: 2rem clamp(2rem, 5vw, 5rem);
+  margin-top: clamp(3rem, 5vw, 4.5rem);
+  font-size: 0.95rem;
+  line-height: 1.9;
+}
+.footer-links ul { margin: 0; padding: 0; list-style: none; }
+
+.menu-foot a { transition: color 0.3s; }
+.menu-foot a:hover { color: var(--white); }
+
 /* ---------- Responsive ---------- */
+
+@media (max-width: 1240px) {
+  .header-phone { display: none; }
+  .awards-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
 
 @media (max-width: 1100px) {
   .nav { display: none; }
@@ -1300,6 +1562,11 @@ em { font-style: italic; }
   .faq-wrap { grid-template-columns: 1fr; }
   .faq-head { position: static; }
 
+  .clients-head { grid-template-columns: 1fr; row-gap: 1.5rem; }
+  .team-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .post { grid-template-columns: 1fr auto; gap: 0.5rem 1.5rem; }
+  .post-date { grid-column: 1 / -1; }
+
   .cta-wrap { grid-template-columns: 1fr; }
 
   .modal { overflow-y: auto; }
@@ -1319,10 +1586,13 @@ em { font-style: italic; }
 
 @media (max-width: 640px) {
   .header-btn { display: none; }
-  .logo { font-size: 1.5rem; }
+  .logo { gap: 0.6rem; }
+  .logo-mark { width: 1.35rem; height: 1.95rem; }
+  .logo-name { font-size: 1.2rem; }
+  .logo-sub { font-size: 0.42rem; }
 
   .hero-bottom { flex-direction: column; align-items: flex-start; gap: 1.75rem; }
-  .hero-title { font-size: 25vw; }
+  .hero-title { font-size: 22vw; }
   .hero-right { width: 100%; padding-bottom: 0; gap: 1.1rem; }
   .hero-index { align-self: flex-start; }
 
@@ -1338,6 +1608,12 @@ em { font-style: italic; }
   .form-grid { grid-template-columns: 1fr; }
   .faq-a > p { padding-right: 0; }
 
+  .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .awards-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .awards-grid li { padding: 1rem; }
+  .awards-grid img { max-height: 3.25rem; }
+  .footer-links { grid-template-columns: 1fr 1fr; }
+
   .footer-cols { flex-direction: column; gap: 1.75rem; }
   .footer-bottom { flex-direction: column; }
 
@@ -1350,4 +1626,7 @@ em { font-style: italic; }
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+
+  /* The client logo row keeps its slow, steady scroll */
+  .marquee.is-looping .marquee-track { animation-duration: 110s !important; animation-iteration-count: infinite !important; }
 }
