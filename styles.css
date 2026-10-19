@@ -1320,11 +1320,12 @@ em { font-style: italic; }
 .hero-swap-words > span {
   grid-area: 1 / 1;
   font-style: italic;
+  opacity: 0;
   transform: translateY(105%);
-  transition: transform 0.9s var(--ease);
+  transition: transform 0.9s var(--ease), opacity 0.6s var(--ease);
 }
 
-.hero-swap-words > span.is-active { transform: none; transition-delay: 0.15s; }
+.hero-swap-words > span.is-active { opacity: 1; transform: none; transition-delay: 0.15s; }
 .hero-swap-words > span.is-prev { transform: translateY(-105%); }
 
 .hero-swap-tail { display: block; font-size: 0.55em; letter-spacing: 0; color: var(--w80); margin-top: 0.35rem; }

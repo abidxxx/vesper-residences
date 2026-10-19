@@ -233,8 +233,20 @@
     heroCurrent.textContent = pad(next + 1);
     // Rotating phrase ("Buy a Home", "Sell Your Home"...) follows the slide
     heroSwap.forEach(function (s, k) {
-      s.classList.toggle("is-prev", s.classList.contains("is-active") && k !== next);
-      s.classList.toggle("is-active", k === next);
+      var wasActive = s.classList.contains("is-active");
+      if (k === next) {
+        s.classList.remove("is-prev");
+        s.classList.add("is-active");
+      } else if (wasActive) {
+        s.classList.remove("is-active");
+        s.classList.add("is-prev");
+      } else if (s.classList.contains("is-prev")) {
+        // Snap back below the mask without sweeping through the visible line
+        s.style.transition = "none";
+        s.classList.remove("is-prev");
+        void s.offsetWidth;
+        s.style.transition = "";
+      }
     });
     nextSlide.style.zIndex = 2;
     prev.style.zIndex = 1;
@@ -875,7 +887,7 @@
   if (faqButtons[0]) faqButtons[0].setAttribute("aria-expanded", "true");
 
   /* =======================================================
-     VIEWING FORM (Netlify Forms when hosted)
+     CONTACT FORM
      ======================================================= */
 
   var form = $("#viewing-form");
@@ -901,32 +913,25 @@
       return;
     }
 
-    if (!/^https?:$/.test(location.protocol)) {
-      msg.className = "form-msg";
-      msg.textContent = "Preview mode: requests are delivered once the site is published on Netlify.";
-      return;
-    }
+    // The site is static (GitHub Pages / Vercel), so the request is handed to the
+    // visitor's email app, addressed to Triumph and filled in from the form.
+    var f = form.elements;
+    var body = [
+      "Name: " + f.name.value.trim(),
+      "Email: " + f.email.value.trim(),
+      "Phone: " + (f.phone.value.trim() || "-"),
+      "Service: " + f.service.value,
+      "I am a: " + f.role.value
+    ].join("\n");
+    window.location.href = "mailto:contact@triumphpm.com?subject=" +
+      encodeURIComponent("Website request: " + f.service.value) +
+      "&body=" + encodeURIComponent(body);
 
-    var btn = form.querySelector('button[type="submit"]');
-    btn.disabled = true;
-    msg.className = "form-msg";
-    msg.textContent = "Sending…";
-
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(new FormData(form)).toString()
-    }).then(function (res) {
-      if (!res.ok) throw new Error(res.status);
-      form.hidden = true;
-      success.hidden = false;
-      success.focus();
-      if (ANIM) gsap.from(success.children, { opacity: 0, y: 20, duration: 0.8, stagger: 0.1, ease: "power3.out" });
-    }).catch(function () {
-      btn.disabled = false;
-      msg.className = "form-msg err";
-      msg.textContent = "Sorry, that did not send. Please email contact@triumphpm.com or call 702.367.2323.";
-    });
+    msg.textContent = "";
+    form.hidden = true;
+    success.hidden = false;
+    success.focus();
+    if (ANIM) gsap.from(success.children, { opacity: 0, y: 20, duration: 0.8, stagger: 0.1, ease: "power3.out" });
   });
 
   form.addEventListener("input", function (e) {
